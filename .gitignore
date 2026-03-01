@@ -1,0 +1,19 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# environment variables
+.env
+.env.production
+.env.local
+
+# macOS
+.DS_Store
+
+# editor
+.vscode/
+*.swp
+*.swo

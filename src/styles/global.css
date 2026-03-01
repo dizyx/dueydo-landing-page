@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dueydo Brand Gold */
+  --color-gold: #C9A84C;
+  --color-gold-bright: #E0C060;
+  --color-gold-dim: #A68A3A;
+  --color-gold-muted: #8B7530;
+
+  /* Light mode backgrounds (parchment/cream) */
+  --color-bg-primary: #FAF8F3;
+  --color-bg-secondary: #F2EDE4;
+  --color-bg-tertiary: #E8E2D6;
+  --color-bg-dark: #1A1714;
+  --color-bg-card: #FFFFFF;
+
+  /* Text */
+  --color-text-primary: #1A1A18;
+  --color-text-secondary: #4A4840;
+  --color-text-tertiary: #8A8880;
+  --color-text-inverse: #F5F2EC;
+
+  /* Borders */
+  --color-border-subtle: #EEECEA;
+  --color-border-default: #D8D4CC;
+  --color-border-strong: #C8C4BC;
+
+  /* Fonts */
+  --font-display: 'Cinzel Decorative', serif;
+  --font-heading: 'Cinzel', serif;
+  --font-accent: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,69 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Coolify Deployment
+        id: trigger
+        run: |
+          RESPONSE=$(curl --request GET "${{ secrets.COOLIFY_WEBHOOK }}" \
+            --header "Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}" \
+            --fail --silent --show-error)
+
+          echo "Response: $RESPONSE"
+
+          DEPLOYMENT_UUID=$(echo "$RESPONSE" | jq -r '.deployments[0].deployment_uuid // empty')
+          if [ -z "$DEPLOYMENT_UUID" ]; then
+            echo "Failed to get deployment UUID"
+            exit 1
+          fi
+
+          echo "deployment_uuid=$DEPLOYMENT_UUID" >> "$GITHUB_OUTPUT"
+          echo "Deployment triggered: $DEPLOYMENT_UUID"
+
+      - name: Wait for Coolify build
+        run: |
+          UUID="${{ steps.trigger.outputs.deployment_uuid }}"
+          COOLIFY_BASE="${{ secrets.COOLIFY_API_BASE }}"
+          TOKEN="${{ secrets.COOLIFY_TOKEN }}"
+
+          echo "Waiting for deployment $UUID..."
+
+          for i in $(seq 1 40); do
+            STATUS=$(curl --silent --fail \
+              "${COOLIFY_BASE}/api/v1/deployments/${UUID}" \
+              --header "Authorization: Bearer ${TOKEN}" | jq -r '.status // "unknown"')
+
+            echo "  Attempt $i/40: status=$STATUS"
+
+            if [ "$STATUS" = "finished" ]; then
+              echo "Deployment complete!"
+              exit 0
+            elif [ "$STATUS" = "failed" ] || [ "$STATUS" = "cancelled" ]; then
+              echo "Deployment $STATUS!"
+              exit 1
+            fi
+
+            sleep 15
+          done
+
+          echo "Deployment timed out after 10 minutes"
+          exit 1
+
+      - name: Purge Bunny CDN cache
+        if: success()
+        run: |
+          curl --request POST \
+            "https://api.bunny.net/pullzone/${{ secrets.BUNNY_PULL_ZONE_ID }}/purgeCache" \
+            --header "AccessKey: ${{ secrets.BUNNY_API_KEY }}" \
+            --header "Content-Type: application/json" \
+            --fail --silent --show-error
+
+          echo "CDN cache purged"
