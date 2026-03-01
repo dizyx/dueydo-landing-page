@@ -95,23 +95,23 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="px-5 md:px-6 py-12 md:py-20">
+    <!-- Features Section — dark background -->
+    <section class="px-5 md:px-6 py-14 md:py-24 bg-bg-dark">
       <div class="max-w-4xl mx-auto">
 
         <!-- Section heading -->
         <div class="text-center mb-8 md:mb-14 reveal">
-          <h2 class="font-heading text-sm md:text-base uppercase tracking-[0.2em] text-gold-dim mb-3">More Than a Messenger</h2>
-          <p class="font-accent text-base md:text-lg text-text-secondary italic">
-            Built for real conversations, not just fleeting messages.
+          <h2 class="font-heading text-sm md:text-base uppercase tracking-[0.2em] text-gold mb-3">More Than a Messenger</h2>
+          <p class="font-accent text-base md:text-lg text-text-inverse/70 italic">
+            Security shouldn't mean settling for less. Rich features, zero compromise.
           </p>
         </div>
 
-        <!-- Feature cards — 2x2 grid -->
+        <!-- Feature cards — 2x2 grid, glass on dark -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 reveal" style="transition-delay: 0.15s;">
 
           <!-- Threads -->
-          <div class="p-5 md:p-7 rounded-xl bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
+          <div class="p-5 md:p-7 rounded-xl bg-white/[0.06] shadow-lg shadow-black/20">
             <div class="flex items-center gap-3 mb-3">
               <div class="w-8 h-8 md:w-9 md:h-9 shrink-0">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
@@ -119,15 +119,15 @@ import Layout from '../layouts/Layout.astro';
                   <path d="M14 10H8m4 4H8" stroke-width="1.5"/>
                 </svg>
               </div>
-              <h3 class="font-heading text-sm md:text-base uppercase tracking-widest text-gold-dim">Threads</h3>
+              <h3 class="font-heading text-sm md:text-base uppercase tracking-widest text-gold">Threads</h3>
             </div>
-            <p class="text-sm text-text-tertiary leading-relaxed">
+            <p class="text-sm text-text-inverse/60 leading-relaxed">
               Reply to any message to start a focused side conversation. The main chat stays clean while you dive deep into any topic.
             </p>
           </div>
 
           <!-- Posts -->
-          <div class="p-5 md:p-7 rounded-xl bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
+          <div class="p-5 md:p-7 rounded-xl bg-white/[0.06] shadow-lg shadow-black/20">
             <div class="flex items-center gap-3 mb-3">
               <div class="w-8 h-8 md:w-9 md:h-9 shrink-0">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
@@ -135,15 +135,15 @@ import Layout from '../layouts/Layout.astro';
                   <path d="M14 2v6h6M8 13h8m-8 4h5"/>
                 </svg>
               </div>
-              <h3 class="font-heading text-sm md:text-base uppercase tracking-widest text-gold-dim">Posts</h3>
+              <h3 class="font-heading text-sm md:text-base uppercase tracking-widest text-gold">Posts</h3>
             </div>
-            <p class="text-sm text-text-tertiary leading-relaxed">
+            <p class="text-sm text-text-inverse/60 leading-relaxed">
               Share ideas worth keeping. Long-form posts with rich formatting live alongside your chat — they don't vanish like messages do.
             </p>
           </div>
 
           <!-- Duress PIN -->
-          <div class="p-5 md:p-7 rounded-xl bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
+          <div class="p-5 md:p-7 rounded-xl bg-white/[0.06] shadow-lg shadow-black/20">
             <div class="flex items-center gap-3 mb-3">
               <div class="w-8 h-8 md:w-9 md:h-9 shrink-0">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
@@ -151,15 +151,15 @@ import Layout from '../layouts/Layout.astro';
                   <path d="M9 12l2 2 4-4" stroke-width="2"/>
                 </svg>
               </div>
-              <h3 class="font-heading text-sm md:text-base uppercase tracking-widest text-gold-dim">Duress PIN</h3>
+              <h3 class="font-heading text-sm md:text-base uppercase tracking-widest text-gold">Duress PIN</h3>
             </div>
-            <p class="text-sm text-text-tertiary leading-relaxed">
+            <p class="text-sm text-text-inverse/60 leading-relaxed">
               A second PIN that silently shows fake conversations if you're ever forced to unlock. Your real messages stay hidden. Recover everything when you're safe.
             </p>
           </div>
 
           <!-- Encrypted Media -->
-          <div class="p-5 md:p-7 rounded-xl bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
+          <div class="p-5 md:p-7 rounded-xl bg-white/[0.06] shadow-lg shadow-black/20">
             <div class="flex items-center gap-3 mb-3">
               <div class="w-8 h-8 md:w-9 md:h-9 shrink-0">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
@@ -168,9 +168,9 @@ import Layout from '../layouts/Layout.astro';
                   <path d="M21 15l-5-5L5 21"/>
                 </svg>
               </div>
-              <h3 class="font-heading text-sm md:text-base uppercase tracking-widest text-gold-dim">Encrypted Media</h3>
+              <h3 class="font-heading text-sm md:text-base uppercase tracking-widest text-gold">Encrypted Media</h3>
             </div>
-            <p class="text-sm text-text-tertiary leading-relaxed">
+            <p class="text-sm text-text-inverse/60 leading-relaxed">
               Share photos, videos, and documents with the same Signal-level encryption as your messages. Everything auto-deletes after two weeks.
             </p>
           </div>
@@ -179,13 +179,13 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- Quote + Coming Soon + Footer -->
-    <section class="px-5 md:px-6 pb-6 md:pb-10">
+    <!-- Quote + Coming Soon + Footer — dark background continues -->
+    <section class="px-5 md:px-6 pb-8 md:pb-12 bg-bg-dark">
       <div class="max-w-4xl mx-auto text-center">
 
         <!-- Tagline -->
         <div class="mb-6 md:mb-10 reveal">
-          <p class="font-accent text-base md:text-lg text-text-secondary leading-relaxed italic">
+          <p class="font-accent text-base md:text-lg text-text-inverse/60 leading-relaxed italic">
             "Even the monks who brewed the finest ales<br class="hidden md:inline"/>
             needed walls to keep their conversations safe."
           </p>
@@ -193,15 +193,15 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Coming Soon -->
         <div class="mb-8 md:mb-12 reveal" style="transition-delay: 0.15s;">
-          <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold bg-bg-primary">
+          <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold bg-bg-dark">
             <div class="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
-            <span class="font-heading text-xs uppercase tracking-[0.2em] text-gold-dim">Coming Soon</span>
+            <span class="font-heading text-xs uppercase tracking-[0.2em] text-gold">Coming Soon</span>
           </div>
         </div>
 
         <!-- Footer -->
         <footer class="py-3 md:py-4">
-          <p class="text-xs text-text-tertiary tracking-wide">
+          <p class="text-xs text-text-inverse/40 tracking-wide">
             &copy; 2026 <a href="https://dizyx.com" class="hover:text-gold transition-colors">dizyx</a>
           </p>
         </footer>
