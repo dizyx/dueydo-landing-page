@@ -97,7 +97,7 @@ import Layout from '../layouts/Layout.astro';
 
       <!-- Coming Soon -->
       <div class="text-center reveal" style="transition-delay: 0.45s;">
-        <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold/40 bg-gold/10">
+        <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold bg-bg-primary">
           <div class="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
           <span class="font-heading text-xs uppercase tracking-[0.2em] text-gold-dim">Coming Soon</span>
         </div>
@@ -122,25 +122,31 @@ import Layout from '../layouts/Layout.astro';
     let mouseX = -1, mouseY = -1;
     let animFrame: number;
 
-    // Stone/parchment color palette
+    // Lighter parchment palette — pushed toward cream/white
     const COLORS = [
-      { r: 250, g: 248, b: 243 },  // cream
-      { r: 242, g: 237, b: 228 },  // warm paper
-      { r: 232, g: 226, b: 214 },  // aged parchment
-      { r: 224, g: 218, b: 204 },  // stone light
-      { r: 214, g: 206, b: 190 },  // stone mid
+      { r: 252, g: 250, b: 247 },  // near-white cream
+      { r: 248, g: 245, b: 238 },  // light parchment
+      { r: 244, g: 240, b: 232 },  // warm paper
+      { r: 240, g: 236, b: 226 },  // soft sand
+      { r: 236, g: 231, b: 220 },  // light stone
     ];
 
-    // Gold accent
+    // Gold accent for mouse proximity
     const GOLD = { r: 201, g: 168, b: 76 };
 
     interface Stone {
-      x: number;
-      y: number;
+      x: number;       // current x (includes drift)
+      y: number;       // current y (includes drift)
+      baseX: number;   // origin x for grid position
+      baseY: number;   // origin y for grid position
       size: number;
       colorIdx: number;
-      phase: number;
-      speed: number;
+      phase: number;       // breathing phase offset
+      speed: number;       // breathing speed
+      driftAngle: number;  // direction of drift
+      driftSpeed: number;  // how fast it drifts (px/s)
+      driftRadius: number; // max wander distance from origin
+      driftPhase: number;  // phase offset for drift oscillation
     }
 
     let stones: Stone[] = [];
@@ -153,19 +159,27 @@ import Layout from '../layouts/Layout.astro';
 
     function generateStones() {
       stones = [];
-      const spacing = 60;
-      const cols = Math.ceil(width / spacing) + 2;
-      const rows = Math.ceil(height / spacing) + 2;
+      const spacing = 65;
+      const cols = Math.ceil(width / spacing) + 3;
+      const rows = Math.ceil(height / spacing) + 3;
 
       for (let r = 0; r < rows; r++) {
         for (let c = 0; c < cols; c++) {
+          const baseX = c * spacing + (r % 2 ? spacing / 2 : 0) + (Math.random() - 0.5) * 20;
+          const baseY = r * spacing + (Math.random() - 0.5) * 20;
           stones.push({
-            x: c * spacing + (r % 2 ? spacing / 2 : 0) + (Math.random() - 0.5) * 20,
-            y: r * spacing + (Math.random() - 0.5) * 20,
-            size: spacing * 0.4 + Math.random() * spacing * 0.3,
+            x: baseX,
+            y: baseY,
+            baseX,
+            baseY,
+            size: spacing * 0.35 + Math.random() * spacing * 0.3,
             colorIdx: Math.floor(Math.random() * COLORS.length),
             phase: Math.random() * Math.PI * 2,
-            speed: 0.3 + Math.random() * 0.4,
+            speed: 0.2 + Math.random() * 0.3,
+            driftAngle: Math.random() * Math.PI * 2,
+            driftSpeed: 0.15 + Math.random() * 0.25,  // slow wandering
+            driftRadius: 8 + Math.random() * 16,       // wander 8-24px from origin
+            driftPhase: Math.random() * Math.PI * 2,
           });
         }
       }
@@ -175,30 +189,35 @@ import Layout from '../layouts/Layout.astro';
       const t = time * 0.001;
       ctx.clearRect(0, 0, width, height);
 
-      // Fill base
+      // Fill base — same cream as bg-primary
       ctx.fillStyle = '#FAF8F3';
       ctx.fillRect(0, 0, width, height);
 
       for (const stone of stones) {
+        // Slow drift: each circle oscillates around its origin
+        const driftX = Math.sin(t * stone.driftSpeed + stone.driftPhase) * stone.driftRadius;
+        const driftY = Math.cos(t * stone.driftSpeed * 0.7 + stone.driftAngle) * stone.driftRadius * 0.8;
+        stone.x = stone.baseX + driftX;
+        stone.y = stone.baseY + driftY;
+
+        // Gentle breathing pulse
         const pulse = Math.sin(t * stone.speed + stone.phase) * 0.5 + 0.5;
         const c = COLORS[stone.colorIdx];
 
-        // Mouse proximity glow
+        // Mouse proximity — subtle gold warmth
         let goldInfluence = 0;
         if (mouseX >= 0) {
           const dx = stone.x - mouseX;
           const dy = stone.y - mouseY;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          goldInfluence = Math.max(0, 1 - dist / 200) * 0.3;
+          goldInfluence = Math.max(0, 1 - dist / 180) * 0.25;
         }
 
-        // Ambient light pulse
-        const brightness = pulse * 0.06;
-
-        const r = Math.round(c.r + (GOLD.r - c.r) * goldInfluence + brightness * 30);
-        const g = Math.round(c.g + (GOLD.g - c.g) * goldInfluence + brightness * 20);
-        const b = Math.round(c.b + (GOLD.b - c.b) * goldInfluence + brightness * 10);
-        const alpha = 0.35 + pulse * 0.15 + goldInfluence * 0.3;
+        // Keep it light: low alpha, gentle color shift
+        const r = Math.round(c.r + (GOLD.r - c.r) * goldInfluence);
+        const g = Math.round(c.g + (GOLD.g - c.g) * goldInfluence);
+        const b = Math.round(c.b + (GOLD.b - c.b) * goldInfluence);
+        const alpha = 0.15 + pulse * 0.12 + goldInfluence * 0.2;
 
         ctx.beginPath();
         ctx.arc(stone.x, stone.y, stone.size, 0, Math.PI * 2);
