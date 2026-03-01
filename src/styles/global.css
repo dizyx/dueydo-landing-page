@@ -32,10 +32,24 @@
   --font-body: 'Inter', system-ui, sans-serif;
 }
 
-/* Single-viewport page — no scrolling */
+/* Single-viewport page — no scrolling on desktop/normal mobile */
 html, body {
   height: 100%;
   overflow: hidden;
+}
+
+/* Safety valve: very short viewports (landscape phones, small SE) allow scroll */
+@media (max-height: 540px) {
+  html, body {
+    overflow-y: auto;
+  }
+}
+
+/* iOS safe area spacing */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  footer {
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+  }
 }
 
 /* Scroll reveal animation */
