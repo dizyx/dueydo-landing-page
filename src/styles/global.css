@@ -32,9 +32,10 @@
   --font-body: 'Inter', system-ui, sans-serif;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+/* Single-viewport page — no scrolling */
+html, body {
+  height: 100%;
+  overflow: hidden;
 }
 
 /* Scroll reveal animation */

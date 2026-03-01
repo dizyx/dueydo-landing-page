@@ -1,22 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <defs>
-    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#E0C060"/>
-      <stop offset="100%" style="stop-color:#A68A3A"/>
-    </linearGradient>
-  </defs>
-  <rect width="32" height="32" rx="6" fill="#1A1714"/>
-  <path
-    d="M16 6 L26 12 L26 20 L16 26 L6 20 L6 12 Z"
-    fill="none"
-    stroke="url(#goldGradient)"
-    stroke-width="2"
-    stroke-linejoin="round"
-  />
-  <path
-    d="M16 10 L22 14 L22 18 L16 22 L10 18 L10 14 Z"
-    fill="url(#goldGradient)"
-    opacity="0.3"
-  />
-  <circle cx="16" cy="16" r="3" fill="url(#goldGradient)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 120 140">
+  <path d="M14 8 L106 8 Q112 8 112 14 L112 65 Q112 115 60 136 Q8 115 8 65 L8 14 Q8 8 14 8 Z"
+    fill="#050505" stroke="#C9A84C" stroke-width="4"/>
+  <path d="M22 16 L98 16 Q100 16 100 18 L100 62 Q100 106 60 124 Q20 106 20 62 L20 18 Q20 16 22 16 Z"
+    fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.25"/>
+  <text x="60" y="82" text-anchor="middle" font-family="serif"
+    font-size="56" font-weight="700" fill="#C9A84C" opacity="0.9">D</text>
 </svg>

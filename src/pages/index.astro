@@ -6,89 +6,103 @@ import Layout from '../layouts/Layout.astro';
   <!-- Background Canvas -->
   <canvas id="bg-canvas" class="fixed inset-0 -z-10"></canvas>
 
-  <!-- Main Content -->
-  <main class="relative z-10 flex flex-col items-center justify-center min-h-screen px-6">
+  <!-- Single viewport container — no scroll -->
+  <div class="relative z-10 h-screen flex flex-col">
 
-    <!-- Logo & Name -->
-    <div class="text-center mb-12 reveal">
-      <!-- Shield icon -->
-      <div class="mx-auto mb-8 w-20 h-20">
-        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg">
-          <defs>
-            <linearGradient id="shieldGold" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#E0C060"/>
-              <stop offset="100%" style="stop-color:#A68A3A"/>
-            </linearGradient>
-          </defs>
-          <!-- Outer hexagon (fortress shape) -->
-          <path d="M40 4 L72 20 L72 52 L40 76 L8 52 L8 20 Z"
-            fill="none" stroke="url(#shieldGold)" stroke-width="2.5" stroke-linejoin="round" opacity="0.7"/>
-          <!-- Inner hexagon -->
-          <path d="M40 16 L60 28 L60 48 L40 64 L20 48 L20 28 Z"
-            fill="url(#shieldGold)" opacity="0.08"/>
-          <!-- Keyhole / lock motif -->
-          <circle cx="40" cy="34" r="7" fill="none" stroke="url(#shieldGold)" stroke-width="2"/>
-          <rect x="37" y="39" width="6" height="12" rx="2" fill="url(#shieldGold)" opacity="0.6"/>
-        </svg>
+    <!-- Main Content (grows to fill) -->
+    <main class="flex-1 flex flex-col items-center justify-center px-6">
+
+      <!-- Logo & Name -->
+      <div class="text-center mb-8 md:mb-12 reveal">
+        <!-- Shield + D logo -->
+        <div class="mx-auto mb-6 w-16 h-[4.5rem] md:w-20 md:h-[5.5rem]">
+          <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg">
+            <path d="M14 8 L106 8 Q112 8 112 14 L112 65 Q112 115 60 136 Q8 115 8 65 L8 14 Q8 8 14 8 Z"
+              fill="#050505" stroke="#C9A84C" stroke-width="4"/>
+            <path d="M22 16 L98 16 Q100 16 100 18 L100 62 Q100 106 60 124 Q20 106 20 62 L20 18 Q20 16 22 16 Z"
+              fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.25"/>
+            <text x="60" y="82" text-anchor="middle" font-family="'Cinzel Decorative', serif"
+              font-size="56" font-weight="700" fill="#C9A84C" opacity="0.9">D</text>
+          </svg>
+        </div>
+
+        <h1 class="font-display text-5xl md:text-7xl tracking-wide text-bg-dark mb-4"
+            style="text-shadow: 0 1px 2px rgba(0,0,0,0.06);">
+          Dueydo
+        </h1>
+        <p class="font-accent text-xl md:text-2xl text-text-secondary italic tracking-wide">
+          Private secure chat for friends
+        </p>
       </div>
 
-      <h1 class="font-display text-5xl md:text-7xl tracking-wide text-bg-dark mb-4"
-          style="text-shadow: 0 1px 2px rgba(0,0,0,0.06);">
-        Dueydo
-      </h1>
-      <p class="font-accent text-xl md:text-2xl text-text-secondary italic tracking-wide">
-        Private secure chat for friends
+      <!-- Three Pillars -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-3xl w-full mb-8 md:mb-12 reveal" style="transition-delay: 0.15s;">
+        <div class="text-center p-5 md:p-6 rounded-lg bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
+          <!-- Shield icon -->
+          <div class="mx-auto mb-3 w-8 h-8">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+              <path d="M12 2l8 4v5c0 5.5-3.8 10.7-8 12-4.2-1.3-8-6.5-8-12V6l8-4z"/>
+              <path d="M12 8v4m0 2h.01" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="font-heading text-sm uppercase tracking-widest text-gold-dim mb-2">Fortified</h3>
+          <p class="text-sm text-text-tertiary leading-relaxed">
+            Signal Protocol encryption. Your words are yours alone.
+          </p>
+        </div>
+        <div class="text-center p-5 md:p-6 rounded-lg bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
+          <!-- Hourglass icon -->
+          <div class="mx-auto mb-3 w-8 h-8">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+              <path d="M6 2h12M6 22h12M7 2v4a5 5 0 005 5 5 5 0 005-5V2M7 22v-4a5 5 0 015-5 5 5 0 015 5v4"/>
+              <circle cx="12" cy="12" r="1" fill="#C9A84C" stroke="none"/>
+            </svg>
+          </div>
+          <h3 class="font-heading text-sm uppercase tracking-widest text-gold-dim mb-2">Ephemeral</h3>
+          <p class="text-sm text-text-tertiary leading-relaxed">
+            Messages vanish after two weeks. No archives, no traces.
+          </p>
+        </div>
+        <div class="text-center p-5 md:p-6 rounded-lg bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
+          <!-- Crossed swords icon -->
+          <div class="mx-auto mb-3 w-8 h-8">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+              <path d="M4 20L18 4M4 20l2-2m-2 2l-2-2m16-12l2 2m-2-2l-2-2"/>
+              <path d="M20 20L6 4M20 20l-2-2m2 2l2-2M6 4L4 6M6 4l2-2"/>
+            </svg>
+          </div>
+          <h3 class="font-heading text-sm uppercase tracking-widest text-gold-dim mb-2">Sovereign</h3>
+          <p class="text-sm text-text-tertiary leading-relaxed">
+            EU infrastructure. Zero-knowledge server. Your data stays yours.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tagline -->
+      <div class="text-center max-w-lg mb-8 md:mb-10 reveal" style="transition-delay: 0.3s;">
+        <p class="font-accent text-lg text-text-secondary leading-relaxed italic">
+          "Even the monks who brewed the finest ales<br/>
+          needed walls to keep their conversations safe."
+        </p>
+      </div>
+
+      <!-- Coming Soon -->
+      <div class="text-center reveal" style="transition-delay: 0.45s;">
+        <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold/30 bg-gold/5">
+          <div class="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
+          <span class="font-heading text-xs uppercase tracking-[0.2em] text-gold-dim">Coming Soon</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer (pinned to bottom of viewport) -->
+    <footer class="text-center py-4 px-6 shrink-0">
+      <p class="text-xs text-text-tertiary tracking-wide">
+        &copy; 2026 <a href="https://dizyx.com" class="hover:text-gold transition-colors">dizyx</a>
       </p>
-    </div>
+    </footer>
 
-    <!-- Three Pillars -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl w-full mb-16 reveal" style="transition-delay: 0.15s;">
-      <div class="text-center p-6 rounded-lg bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
-        <div class="text-3xl mb-3">&#x1F6E1;</div>
-        <h3 class="font-heading text-sm uppercase tracking-widest text-gold-dim mb-2">Fortified</h3>
-        <p class="text-sm text-text-tertiary leading-relaxed">
-          Signal Protocol encryption. Your words are yours alone.
-        </p>
-      </div>
-      <div class="text-center p-6 rounded-lg bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
-        <div class="text-3xl mb-3">&#x1F56D;</div>
-        <h3 class="font-heading text-sm uppercase tracking-widest text-gold-dim mb-2">Ephemeral</h3>
-        <p class="text-sm text-text-tertiary leading-relaxed">
-          Messages vanish after two weeks. No archives, no traces.
-        </p>
-      </div>
-      <div class="text-center p-6 rounded-lg bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
-        <div class="text-3xl mb-3">&#x2694;</div>
-        <h3 class="font-heading text-sm uppercase tracking-widest text-gold-dim mb-2">Sovereign</h3>
-        <p class="text-sm text-text-tertiary leading-relaxed">
-          EU infrastructure. Zero-knowledge server. Your data stays yours.
-        </p>
-      </div>
-    </div>
-
-    <!-- Tagline -->
-    <div class="text-center max-w-lg mb-12 reveal" style="transition-delay: 0.3s;">
-      <p class="font-accent text-lg text-text-secondary leading-relaxed italic">
-        "Even the monks who brewed the finest ales<br/>
-        needed walls to keep their conversations safe."
-      </p>
-    </div>
-
-    <!-- Coming Soon -->
-    <div class="text-center reveal" style="transition-delay: 0.45s;">
-      <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold/30 bg-gold/5">
-        <div class="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
-        <span class="font-heading text-xs uppercase tracking-[0.2em] text-gold-dim">Coming Soon</span>
-      </div>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="relative z-10 text-center py-8 px-6">
-    <p class="text-xs text-text-tertiary tracking-wide">
-      &copy; 2026 <a href="https://dizyx.com" class="hover:text-gold transition-colors">dizyx LLC</a>
-    </p>
-  </footer>
+  </div>
 
   <!-- Background Animation -->
   <script>
