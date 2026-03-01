@@ -32,17 +32,9 @@
   --font-body: 'Inter', system-ui, sans-serif;
 }
 
-/* Single-viewport page — no scrolling on desktop/normal mobile */
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
-
-/* Safety valve: very short viewports (landscape phones, small SE) allow scroll */
-@media (max-height: 540px) {
-  html, body {
-    overflow-y: auto;
-  }
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
 /* iOS safe area spacing */
