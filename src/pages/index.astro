@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ShieldLogo from '../components/ShieldLogo.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
@@ -15,16 +17,7 @@ import Layout from '../layouts/Layout.astro';
       <!-- Logo & Name -->
       <div class="text-center mb-6 md:mb-10 reveal">
         <!-- Shield + D logo -->
-        <div class="mx-auto mb-3 md:mb-6 w-12 h-14 md:w-20 md:h-[5.5rem]">
-          <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg">
-            <path d="M14 8 L106 8 Q112 8 112 14 L112 65 Q112 115 60 136 Q8 115 8 65 L8 14 Q8 8 14 8 Z"
-              fill="#050505" stroke="#C9A84C" stroke-width="4"/>
-            <path d="M22 16 L98 16 Q100 16 100 18 L100 62 Q100 106 60 124 Q20 106 20 62 L20 18 Q20 16 22 16 Z"
-              fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.25"/>
-            <text x="60" y="82" text-anchor="middle" font-family="'Cinzel Decorative', serif"
-              font-size="56" font-weight="700" fill="#C9A84C" opacity="0.9">D</text>
-          </svg>
-        </div>
+        <ShieldLogo class="mx-auto mb-3 md:mb-6 w-12 h-14 md:w-20 md:h-[5.5rem]" />
 
         <h1 class="font-display text-4xl md:text-7xl tracking-wide text-bg-dark mb-2 md:mb-4"
             style="text-shadow: 0 1px 2px rgba(0,0,0,0.06);">
@@ -179,6 +172,81 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
+    <!-- Screenshot Gallery — dark background continues -->
+    <section class="px-5 md:px-6 py-14 md:py-24 bg-bg-dark">
+      <div class="max-w-4xl mx-auto">
+
+        <!-- Section heading -->
+        <div class="text-center mb-10 md:mb-16 reveal">
+          <h2 class="font-heading text-sm md:text-base uppercase tracking-[0.2em] text-gold mb-3">See It In Action</h2>
+          <p class="font-accent text-base md:text-lg text-text-inverse/70 italic">
+            Light mode or dark mode. Your conversations, your way.
+          </p>
+        </div>
+
+        <!-- Chat -->
+        <div class="mb-12 md:mb-16 reveal" style="transition-delay: 0.1s;">
+          <div class="screenshot-pair">
+            <div class="phone-frame">
+              <img src="/screenshots/chat-light-mobile.png" alt="Dueydo chat in light mode" loading="lazy" />
+            </div>
+            <div class="phone-frame">
+              <img src="/screenshots/chat-dark-mobile.png" alt="Dueydo chat in dark mode" loading="lazy" />
+            </div>
+          </div>
+          <p class="text-center mt-4 md:mt-5 text-sm text-text-inverse/50 font-accent italic">
+            End-to-end encrypted conversations
+          </p>
+        </div>
+
+        <!-- Threads -->
+        <div class="mb-12 md:mb-16 reveal" style="transition-delay: 0.1s;">
+          <div class="screenshot-pair">
+            <div class="phone-frame">
+              <img src="/screenshots/thread-light-mobile.png" alt="Dueydo thread in light mode" loading="lazy" />
+            </div>
+            <div class="phone-frame">
+              <img src="/screenshots/thread-dark-mobile.png" alt="Dueydo thread in dark mode" loading="lazy" />
+            </div>
+          </div>
+          <p class="text-center mt-4 md:mt-5 text-sm text-text-inverse/50 font-accent italic">
+            Focused side conversations in threads
+          </p>
+        </div>
+
+        <!-- Posts List -->
+        <div class="mb-12 md:mb-16 reveal" style="transition-delay: 0.1s;">
+          <div class="screenshot-pair">
+            <div class="phone-frame">
+              <img src="/screenshots/posts-list-light-mobile.png" alt="Dueydo posts in light mode" loading="lazy" />
+            </div>
+            <div class="phone-frame">
+              <img src="/screenshots/posts-list-dark-mobile.png" alt="Dueydo posts in dark mode" loading="lazy" />
+            </div>
+          </div>
+          <p class="text-center mt-4 md:mt-5 text-sm text-text-inverse/50 font-accent italic">
+            Long-form posts that persist
+          </p>
+        </div>
+
+        <!-- Post Detail -->
+        <div class="reveal" style="transition-delay: 0.1s;">
+          <div class="screenshot-pair">
+            <div class="phone-frame">
+              <img src="/screenshots/post-detail-light-mobile.png" alt="Dueydo post detail in light mode" loading="lazy" />
+            </div>
+            <div class="phone-frame">
+              <img src="/screenshots/post-detail-dark-mobile.png" alt="Dueydo post detail in dark mode" loading="lazy" />
+            </div>
+          </div>
+          <p class="text-center mt-4 md:mt-5 text-sm text-text-inverse/50 font-accent italic">
+            Rich post detail with comments
+          </p>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Quote + Coming Soon + Footer — dark background continues -->
     <section class="px-5 md:px-6 pb-8 md:pb-12 bg-bg-dark">
       <div class="max-w-4xl mx-auto text-center">
@@ -200,11 +268,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <!-- Footer -->
-        <footer class="py-3 md:py-4">
-          <p class="text-xs text-text-inverse/40 tracking-wide">
-            &copy; 2026 <a href="https://dizyx.com" class="hover:text-gold transition-colors">dizyx</a>
-          </p>
-        </footer>
+        <Footer />
 
       </div>
     </section>

@@ -1,0 +1,25 @@
+---
+/**
+ * ShieldLogo — Reusable Dueydo shield + D SVG logo.
+ *
+ * Used on the landing page hero and the invite page.
+ * The shield is the same SVG that appears in the invite email.
+ */
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<div class={className}>
+  <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg">
+    <path d="M14 8 L106 8 Q112 8 112 14 L112 65 Q112 115 60 136 Q8 115 8 65 L8 14 Q8 8 14 8 Z"
+      fill="#050505" stroke="#C9A84C" stroke-width="4"/>
+    <path d="M22 16 L98 16 Q100 16 100 18 L100 62 Q100 106 60 124 Q20 106 20 62 L20 18 Q20 16 22 16 Z"
+      fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.25"/>
+    <text x="60" y="82" text-anchor="middle" font-family="'Cinzel Decorative', serif"
+      font-size="56" font-weight="700" fill="#C9A84C" opacity="0.9">D</text>
+  </svg>
+</div>

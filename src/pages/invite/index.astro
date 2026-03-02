@@ -1,0 +1,378 @@
+---
+/**
+ * Invite Page — validates invite tokens and routes users to download the app.
+ *
+ * This is a static Astro page served by nginx for all /invite/* paths.
+ * The invite token is parsed client-side from the URL path.
+ * Token validation happens via fetch() to api.dueydo.com (CORS enabled).
+ *
+ * States: loading → valid | invalid | expired | used
+ *
+ * On valid: shows group info, invite email, features, and app download buttons
+ * for both iOS and Android. Includes deep link support for users who already
+ * have the app installed.
+ */
+
+import Layout from '../../layouts/Layout.astro';
+import ShieldLogo from '../../components/ShieldLogo.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout
+  title="Invitation to Dueydo"
+  description="You've been invited to Dueydo — private, end-to-end encrypted messaging built on the Signal Protocol."
+  ogUrl="https://dueydo.com/invite"
+>
+  <div class="min-h-dvh bg-bg-dark flex flex-col items-center justify-center px-5 py-12">
+
+    <!-- Logo + Title -->
+    <div class="text-center mb-8">
+      <ShieldLogo class="mx-auto mb-4 w-14 h-16 md:w-20 md:h-[5.5rem]" />
+      <h1 class="font-display text-3xl md:text-5xl tracking-wide text-gold mb-2"
+          style="text-shadow: 0 1px 4px rgba(201,168,76,0.15);">
+        Dueydo
+      </h1>
+      <p class="font-accent text-base md:text-lg text-text-inverse/60 italic tracking-wide">
+        Private secure chat for friends
+      </p>
+    </div>
+
+    <!-- Content Card -->
+    <div id="invite-card" class="w-full max-w-md rounded-xl bg-white/[0.06] border border-white/[0.08] shadow-lg shadow-black/20 p-6 md:p-8">
+
+      <!-- Loading State (visible by default) -->
+      <div id="state-loading" class="text-center py-6">
+        <div class="mx-auto mb-4 w-10 h-10 rounded-full border-2 border-gold/30 border-t-gold animate-spin"></div>
+        <p class="font-body text-sm text-text-inverse/60">Validating your invite&hellip;</p>
+      </div>
+
+      <!-- Valid State -->
+      <div id="state-valid" class="hidden">
+        <!-- Early Access badge -->
+        <div class="mb-5 text-center">
+          <span class="inline-block bg-gold/[0.12] text-gold text-[11px] font-semibold uppercase tracking-widest px-3 py-1 rounded">
+            Early Access
+          </span>
+        </div>
+
+        <!-- Heading -->
+        <h2 class="font-heading text-xl md:text-2xl text-gold text-center mb-2">You're Invited!</h2>
+
+        <!-- Group name -->
+        <p class="text-center text-text-inverse/70 text-sm mb-6">
+          You've been invited to join
+          <span id="invite-group" class="font-semibold text-gold"></span>
+        </p>
+
+        <!-- Email -->
+        <div class="rounded-lg bg-white/[0.04] border border-white/[0.06] p-4 mb-4">
+          <p class="text-xs text-text-inverse/40 mb-1">This invite is for</p>
+          <p id="invite-email" class="text-sm font-medium text-text-inverse/90"></p>
+        </div>
+
+        <!-- Features -->
+        <div class="rounded-lg bg-white/[0.04] border border-white/[0.06] p-4 mb-4">
+          <h3 class="text-xs font-semibold text-text-inverse/50 uppercase tracking-wider mb-3">What is Dueydo?</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2.5 text-sm text-text-inverse/60">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>
+              End-to-end encrypted messaging
+            </li>
+            <li class="flex items-center gap-2.5 text-sm text-text-inverse/60">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>
+              Signal Protocol security
+            </li>
+            <li class="flex items-center gap-2.5 text-sm text-text-inverse/60">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>
+              Messages expire after 2 weeks
+            </li>
+            <li class="flex items-center gap-2.5 text-sm text-text-inverse/60">
+              <span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>
+              Invite-only community
+            </li>
+          </ul>
+        </div>
+
+        <!-- Expiration -->
+        <p id="invite-expires" class="text-center text-xs text-text-inverse/30 mb-6"></p>
+
+        <!-- Primary CTA -->
+        <button
+          id="btn-get-app"
+          class="w-full py-3.5 rounded-lg bg-gold text-bg-dark font-semibold text-[15px] tracking-wide
+                 hover:bg-gold-bright active:bg-gold-dim transition-colors cursor-pointer"
+        >
+          Get the App
+        </button>
+
+        <!-- Platform download row -->
+        <div id="download-row" class="hidden mt-4 grid grid-cols-2 gap-3">
+          <a id="link-ios" href="#" target="_blank" rel="noopener noreferrer"
+             class="flex items-center justify-center gap-2 py-3 rounded-lg bg-white/[0.06] border border-white/[0.08]
+                    text-text-inverse/80 text-sm font-medium hover:bg-white/[0.10] transition-colors">
+            <!-- Apple icon -->
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            App Store
+          </a>
+          <a id="link-android" href="#" target="_blank" rel="noopener noreferrer"
+             class="flex items-center justify-center gap-2 py-3 rounded-lg bg-white/[0.06] border border-white/[0.08]
+                    text-text-inverse/80 text-sm font-medium hover:bg-white/[0.10] transition-colors">
+            <!-- Android/Play icon -->
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 20.5v-17c0-.83.52-1.28 1.23-.89l14.54 8.5c.71.39.71 1.39 0 1.78L4.23 21.39c-.71.39-1.23-.06-1.23-.89z"/>
+            </svg>
+            Google Play
+          </a>
+        </div>
+
+        <!-- Deep link for existing users -->
+        <p class="mt-4 text-center">
+          <button id="btn-open-app" class="text-xs text-gold/60 hover:text-gold transition-colors cursor-pointer bg-transparent border-none">
+            Already have the app? Open directly
+          </button>
+        </p>
+      </div>
+
+      <!-- Invalid State -->
+      <div id="state-invalid" class="hidden text-center py-6">
+        <div class="mx-auto mb-4 w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center">
+          <svg class="w-6 h-6 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="15" y1="9" x2="9" y2="15"/>
+            <line x1="9" y1="9" x2="15" y2="15"/>
+          </svg>
+        </div>
+        <h2 class="font-heading text-lg text-red-400 mb-2">Invalid Invite</h2>
+        <p class="text-sm text-text-inverse/50 mb-6 max-w-xs mx-auto">
+          This invite link is not valid. It may be incorrect or has been revoked.
+          Please request a new invite from an existing member.
+        </p>
+        <a href="/" class="inline-block px-5 py-2 rounded-lg bg-white/[0.06] border border-white/[0.08] text-sm text-text-inverse/70 hover:bg-white/[0.10] transition-colors">
+          Visit Dueydo
+        </a>
+      </div>
+
+      <!-- Expired State -->
+      <div id="state-expired" class="hidden text-center py-6">
+        <div class="mx-auto mb-4 w-12 h-12 rounded-full bg-amber-500/10 flex items-center justify-center">
+          <svg class="w-6 h-6 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h2 class="font-heading text-lg text-amber-400 mb-2">Invite Expired</h2>
+        <p class="text-sm text-text-inverse/50 mb-6 max-w-xs mx-auto">
+          Invites are valid for 7 days. Please ask the person who invited you to send a new one.
+        </p>
+        <a href="/" class="inline-block px-5 py-2 rounded-lg bg-white/[0.06] border border-white/[0.08] text-sm text-text-inverse/70 hover:bg-white/[0.10] transition-colors">
+          Visit Dueydo
+        </a>
+      </div>
+
+      <!-- Used State -->
+      <div id="state-used" class="hidden text-center py-6">
+        <div class="mx-auto mb-4 w-12 h-12 rounded-full bg-white/[0.06] flex items-center justify-center">
+          <svg class="w-6 h-6 text-text-inverse/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <h2 class="font-heading text-lg text-text-inverse/60 mb-2">Invite Already Used</h2>
+        <p class="text-sm text-text-inverse/50 mb-6 max-w-xs mx-auto">
+          This invite has been redeemed. If you already created an account, open the app to sign in.
+        </p>
+        <div class="flex gap-3 justify-center">
+          <button id="btn-open-app-used" class="px-5 py-2 rounded-lg bg-gold text-bg-dark text-sm font-semibold hover:bg-gold-bright transition-colors cursor-pointer">
+            Open App
+          </button>
+          <a href="/" class="inline-block px-5 py-2 rounded-lg bg-white/[0.06] border border-white/[0.08] text-sm text-text-inverse/70 hover:bg-white/[0.10] transition-colors">
+            Visit Dueydo
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-8 text-center">
+      <Footer />
+    </div>
+
+  </div>
+
+  <!-- Invite Logic -->
+  <script>
+    // =========================================================================
+    // Constants
+    // =========================================================================
+
+    const API_BASE = 'https://api.dueydo.com/api/v1';
+
+    /** App download URLs — update when app store listings go live. */
+    const DOWNLOAD = {
+      ios: '#',        // Apple App Store URL
+      android: '#',    // Google Play Store URL
+      apk: '#',        // Direct APK download from Bunny Storage
+    } as const;
+
+    // =========================================================================
+    // DOM references
+    // =========================================================================
+
+    const stateLoading  = document.getElementById('state-loading')!;
+    const stateValid    = document.getElementById('state-valid')!;
+    const stateInvalid  = document.getElementById('state-invalid')!;
+    const stateExpired  = document.getElementById('state-expired')!;
+    const stateUsed     = document.getElementById('state-used')!;
+
+    const elGroup       = document.getElementById('invite-group')!;
+    const elEmail       = document.getElementById('invite-email')!;
+    const elExpires     = document.getElementById('invite-expires')!;
+    const downloadRow   = document.getElementById('download-row')!;
+    const linkIos       = document.getElementById('link-ios') as HTMLAnchorElement;
+    const linkAndroid   = document.getElementById('link-android') as HTMLAnchorElement;
+
+    const btnGetApp     = document.getElementById('btn-get-app')!;
+    const btnOpenApp    = document.getElementById('btn-open-app')!;
+    const btnOpenUsed   = document.getElementById('btn-open-app-used')!;
+
+    // =========================================================================
+    // State management
+    // =========================================================================
+
+    type InviteState = 'loading' | 'valid' | 'invalid' | 'expired' | 'used';
+
+    const stateElements: Record<InviteState, HTMLElement> = {
+      loading:  stateLoading,
+      valid:    stateValid,
+      invalid:  stateInvalid,
+      expired:  stateExpired,
+      used:     stateUsed,
+    };
+
+    function showState(state: InviteState) {
+      for (const [key, el] of Object.entries(stateElements)) {
+        el.classList.toggle('hidden', key !== state);
+      }
+    }
+
+    // =========================================================================
+    // Token parsing and validation
+    // =========================================================================
+
+    /** Extract token from the URL path: /invite/TOKEN -> TOKEN */
+    function getToken(): string {
+      return window.location.pathname.replace(/^\/invite\/?/, '').replace(/\/$/, '');
+    }
+
+    /** Basic format check before hitting the API. */
+    function isValidTokenFormat(token: string): boolean {
+      return /^[A-Za-z0-9_-]{20,50}$/.test(token);
+    }
+
+    // =========================================================================
+    // Deep linking
+    // =========================================================================
+
+    let currentToken = '';
+
+    function attemptDeepLink() {
+      if (!currentToken) return;
+      const deepLink = `dueydo://invite/${currentToken}`;
+
+      // Try to open the app via custom scheme
+      window.location.href = deepLink;
+
+      // After a timeout, show download buttons if we're still on the page
+      setTimeout(() => {
+        if (!document.hidden) {
+          downloadRow.classList.remove('hidden');
+        }
+      }, 1500);
+    }
+
+    // =========================================================================
+    // API call
+    // =========================================================================
+
+    async function validateInvite(token: string): Promise<void> {
+      try {
+        const res = await fetch(`${API_BASE}/invites/validate/${encodeURIComponent(token)}`);
+        const body = await res.json();
+
+        if (res.ok && body.success) {
+          // Valid invite — populate the UI
+          const { email, groupName, expiresAt } = body.data;
+
+          elGroup.textContent = groupName || 'Private Group';
+          elEmail.textContent = email || '';
+
+          if (expiresAt) {
+            const date = new Date(expiresAt);
+            elExpires.textContent = `This invite expires on ${date.toLocaleDateString(undefined, {
+              weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+            })}`;
+          }
+
+          // Set download links
+          if (DOWNLOAD.ios !== '#') linkIos.href = DOWNLOAD.ios;
+          if (DOWNLOAD.android !== '#') linkAndroid.href = DOWNLOAD.android;
+
+          showState('valid');
+        } else if (res.status === 404) {
+          showState('invalid');
+        } else {
+          // 400 errors — check the message
+          const error = body.error || '';
+          if (error.includes('expired')) {
+            showState('expired');
+          } else if (error.includes('used')) {
+            showState('used');
+          } else {
+            showState('invalid');
+          }
+        }
+      } catch {
+        // Network error or parse failure
+        showState('invalid');
+      }
+    }
+
+    // =========================================================================
+    // Event listeners
+    // =========================================================================
+
+    btnGetApp.addEventListener('click', () => {
+      attemptDeepLink();
+    });
+
+    btnOpenApp.addEventListener('click', () => {
+      attemptDeepLink();
+    });
+
+    btnOpenUsed.addEventListener('click', () => {
+      // For used invites, still try the deep link in case user has the app
+      if (currentToken) {
+        window.location.href = `dueydo://invite/${currentToken}`;
+      } else {
+        window.location.href = 'dueydo://';
+      }
+    });
+
+    // =========================================================================
+    // Init
+    // =========================================================================
+
+    const token = getToken();
+    currentToken = token;
+
+    if (!token || !isValidTokenFormat(token)) {
+      showState('invalid');
+    } else {
+      showState('loading');
+      validateInvite(token);
+    }
+  </script>
+</Layout>

@@ -5,11 +5,13 @@ import '../styles/global.css'
 interface Props {
   title?: string;
   description?: string;
+  ogUrl?: string;
 }
 
 const {
   title = 'Dueydo: Private Secure Chat for Friends',
-  description = 'End-to-end encrypted messaging with Signal Protocol. Built for friends who value privacy, security, and real conversation. Coming soon.'
+  description = 'End-to-end encrypted messaging with Signal Protocol. Built for friends who value privacy, security, and real conversation. Coming soon.',
+  ogUrl = 'https://dueydo.com'
 } = Astro.props;
 ---
 
@@ -28,7 +30,7 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://dueydo.com" />
+    <meta property="og:url" content={ogUrl} />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
