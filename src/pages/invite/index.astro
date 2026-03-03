@@ -212,9 +212,9 @@ import Footer from '../../components/Footer.astro';
 
     /** App download URLs — update when app store listings go live. */
     const DOWNLOAD = {
-      ios: '#',        // Apple App Store URL
-      android: '#',    // Google Play Store URL
-      apk: '#',        // Direct APK download from Bunny Storage
+      ios: '#',        // Apple App Store URL (TestFlight — coming soon)
+      android: 'https://media.dueydo.com/dueydo/releases/dueydo-latest.apk',
+      apk: 'https://media.dueydo.com/dueydo/releases/dueydo-latest.apk',
     } as const;
 
     // =========================================================================
@@ -316,9 +316,12 @@ import Footer from '../../components/Footer.astro';
             })}`;
           }
 
-          // Set download links
+          // Set download links and show download row if any real URLs exist
           if (DOWNLOAD.ios !== '#') linkIos.href = DOWNLOAD.ios;
           if (DOWNLOAD.android !== '#') linkAndroid.href = DOWNLOAD.android;
+          if (DOWNLOAD.ios !== '#' || DOWNLOAD.android !== '#') {
+            downloadRow.classList.remove('hidden');
+          }
 
           showState('valid');
         } else if (res.status === 404) {
