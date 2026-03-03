@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Dueydo: Prywatny i bezpieczny czat dla znajomych",
+    "description": "Szyfrowanie end-to-end z Signal Protocol. Stworzony dla znajomych, którzy cenią prywatność, bezpieczeństwo i prawdziwe rozmowy. Już wkrótce.",
+    "ogImageAlt": "Dueydo — Prywatny i bezpieczny czat dla znajomych"
+  },
+  "hero": {
+    "tagline": "Prywatny i bezpieczny czat dla znajomych 🍻"
+  },
+  "pillars": {
+    "srOnlyHeading": "Nasze zasady",
+    "fortified": { "title": "Ufortyfikowany", "description": "Szyfrowanie Signal Protocol. Twoje słowa należą tylko do Ciebie.", "descriptionShort": "Signal Protocol E2EE" },
+    "ephemeral": { "title": "Ulotny", "description": "Wiadomości znikają po dwóch tygodniach. Bez archiwów, bez śladów.", "descriptionShort": "Automatyczne usuwanie po 14 dniach" },
+    "sovereign": { "title": "Suwerenny", "description": "Infrastruktura w UE. Serwer zero-knowledge. Twoje dane pozostają Twoje.", "descriptionShort": "EU zero-knowledge infra" }
+  },
+  "features": {
+    "sectionTitle": "Więcej niż komunikator",
+    "sectionSubtitle": "Bezpieczeństwo nie oznacza kompromisów. Bogate funkcje, zero ustępstw.",
+    "threads": { "title": "Threads", "description": "Odpowiedz na dowolną wiadomość, aby rozpocząć osobną rozmowę. Główny czat pozostaje przejrzysty, a Ty możesz zagłębić się w dowolny temat." },
+    "posts": { "title": "Posts", "description": "Udostępniaj pomysły warte zachowania. Długie posty z bogatym formatowaniem żyją obok Twojego czatu — nie znikają tak jak wiadomości." },
+    "duressPin": { "title": "Duress PIN", "description": "Drugi PIN, który po cichu wyświetla fałszywe rozmowy, gdy ktoś zmusi Cię do odblokowania. Twoje prawdziwe wiadomości pozostają ukryte. Odzyskaj wszystko, gdy będziesz bezpieczny." },
+    "encryptedMedia": { "title": "Szyfrowane media", "description": "Udostępniaj zdjęcia, filmy i dokumenty z tym samym szyfrowaniem Signal co Twoje wiadomości. Wszystko jest automatycznie usuwane po dwóch tygodniach." }
+  },
+  "screenshots": {
+    "sectionTitle": "Zobacz w akcji",
+    "sectionSubtitle": "Jasny lub ciemny motyw. Twoje rozmowy, po Twojemu.",
+    "chatCaption": "Rozmowy szyfrowane end-to-end",
+    "threadsCaption": "Skupione rozmowy poboczne w wątkach",
+    "postsCaption": "Długie posty, które nie znikają",
+    "postDetailCaption": "Szczegóły posta z komentarzami",
+    "chatLightAlt": "Czat Dueydo w jasnym motywie", "chatDarkAlt": "Czat Dueydo w ciemnym motywie",
+    "threadLightAlt": "Wątek Dueydo w jasnym motywie", "threadDarkAlt": "Wątek Dueydo w ciemnym motywie",
+    "postsLightAlt": "Posty Dueydo w jasnym motywie", "postsDarkAlt": "Posty Dueydo w ciemnym motywie",
+    "postDetailLightAlt": "Szczegóły posta Dueydo w jasnym motywie", "postDetailDarkAlt": "Szczegóły posta Dueydo w ciemnym motywie"
+  },
+  "closing": {
+    "quote": "\"Nawet mnisi, którzy warzyli najlepsze piwa,<br class=\"hidden md:inline\"/>potrzebowali murów, by chronić swoje rozmowy.\"",
+    "comingSoon": "Już wkrótce"
+  },
+  "footer": { "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>" },
+  "schema": {
+    "appDescription": "Prywatny i bezpieczny czat dla znajomych. Szyfrowanie end-to-end z Signal Protocol, automatycznie znikające wiadomości, wątki i posty.",
+    "orgDescription": "dizyx tworzy oprogramowanie stawiające prywatność na pierwszym miejscu, z infrastrukturą w UE. Butikowa firma konsultingowa AI specjalizująca się w agentic workflows i bezpiecznej komunikacji.",
+    "websiteDescription": "Szyfrowanie end-to-end z Signal Protocol. Stworzony dla znajomych, którzy cenią prywatność, bezpieczeństwo i prawdziwe rozmowy."
+  },
+  "languageSwitcher": { "label": "Język" }
+}

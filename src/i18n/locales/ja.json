@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Dueydo: 友達のためのプライベートで安全なチャット",
+    "description": "Signal Protocolによるエンドツーエンド暗号化メッセージング。プライバシー、セキュリティ、本物の会話を大切にする友達のために。近日公開。",
+    "ogImageAlt": "Dueydo — 友達のためのプライベートで安全なチャット"
+  },
+  "hero": {
+    "tagline": "友達のためのプライベートで安全なチャット 🍻"
+  },
+  "pillars": {
+    "srOnlyHeading": "私たちの理念",
+    "fortified": {
+      "title": "堅牢",
+      "description": "Signal Protocol暗号化。あなたの言葉は、あなただけのもの。",
+      "descriptionShort": "Signal Protocol E2EE"
+    },
+    "ephemeral": {
+      "title": "消えゆく",
+      "description": "メッセージは2週間後に消滅。アーカイブなし、痕跡なし。",
+      "descriptionShort": "14日で自動削除"
+    },
+    "sovereign": {
+      "title": "自律",
+      "description": "EUインフラ。ゼロ知識サーバー。あなたのデータはあなたのもの。",
+      "descriptionShort": "EU zero-knowledge インフラ"
+    }
+  },
+  "features": {
+    "sectionTitle": "メッセンジャー以上の存在",
+    "sectionSubtitle": "セキュリティのために妥協する必要はありません。豊富な機能、ゼロの妥協。",
+    "threads": {
+      "title": "Threads",
+      "description": "任意のメッセージに返信して、集中したサイドトークを始められます。メインチャットはすっきりしたまま、どんなトピックにも深く掘り下げられます。"
+    },
+    "posts": {
+      "title": "Posts",
+      "description": "残す価値のあるアイデアをシェア。リッチフォーマット対応の長文投稿がチャットと共存 — メッセージのように消えません。"
+    },
+    "duressPin": {
+      "title": "Duress PIN",
+      "description": "強制的にロック解除させられた時、偽の会話を静かに表示するもう一つのPINコード。本当のメッセージは隠されたまま。安全な場所ですべてを復元できます。"
+    },
+    "encryptedMedia": {
+      "title": "暗号化メディア",
+      "description": "写真、動画、ドキュメントをメッセージと同じSignalレベルの暗号化で共有。すべて2週間後に自動削除されます。"
+    }
+  },
+  "screenshots": {
+    "sectionTitle": "実際の動作を見る",
+    "sectionSubtitle": "ライトモードもダークモードも。あなたの会話、あなたのスタイル。",
+    "chatCaption": "エンドツーエンド暗号化の会話",
+    "threadsCaption": "スレッドでの集中したサイドトーク",
+    "postsCaption": "残り続ける長文投稿",
+    "postDetailCaption": "コメント付きの投稿詳細",
+    "chatLightAlt": "Dueydo チャット（ライトモード）",
+    "chatDarkAlt": "Dueydo チャット（ダークモード）",
+    "threadLightAlt": "Dueydo スレッド（ライトモード）",
+    "threadDarkAlt": "Dueydo スレッド（ダークモード）",
+    "postsLightAlt": "Dueydo 投稿（ライトモード）",
+    "postsDarkAlt": "Dueydo 投稿（ダークモード）",
+    "postDetailLightAlt": "Dueydo 投稿詳細（ライトモード）",
+    "postDetailDarkAlt": "Dueydo 投稿詳細（ダークモード）"
+  },
+  "closing": {
+    "quote": "\"最高のエールを醸した修道士たちでさえ、<br class=\"hidden md:inline\"/>会話を守るために壁が必要だった。\"",
+    "comingSoon": "近日公開"
+  },
+  "footer": {
+    "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>"
+  },
+  "schema": {
+    "appDescription": "友達のためのプライベートで安全なチャット。Signal Protocolによるエンドツーエンド暗号化メッセージング、自動削除メッセージ、スレッド、投稿機能。",
+    "orgDescription": "dizyxはEUインフラを活用したプライバシーファーストのソフトウェアを開発。エージェントワークフローとセキュア通信を専門とするブティックAIコンサルタンシー。",
+    "websiteDescription": "Signal Protocolによるエンドツーエンド暗号化メッセージング。プライバシー、セキュリティ、本物の会話を大切にする友達のために。"
+  },
+  "languageSwitcher": {
+    "label": "言語"
+  }
+}

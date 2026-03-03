@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Dueydo: Privatus saugus pokalbis draugams",
+    "description": "Ištisinis šifravimas su Signal Protocol. Sukurta draugams, kurie vertina privatumą, saugumą ir tikrus pokalbius. Jau greitai.",
+    "ogImageAlt": "Dueydo — Privatus saugus pokalbis draugams"
+  },
+  "hero": {
+    "tagline": "Privatus saugus pokalbis draugams 🍻"
+  },
+  "pillars": {
+    "srOnlyHeading": "Mūsų principai",
+    "fortified": {
+      "title": "Įtvirtintas",
+      "description": "Signal Protocol šifravimas. Tavo žodžiai priklauso tik tau.",
+      "descriptionShort": "Signal Protocol E2EE"
+    },
+    "ephemeral": {
+      "title": "Laikinas",
+      "description": "Žinutės dingsta po dviejų savaičių. Jokių archyvų, jokių pėdsakų.",
+      "descriptionShort": "Automatiškai ištrina per 14 dienų"
+    },
+    "sovereign": {
+      "title": "Suvereninis",
+      "description": "ES infrastruktūra. Zero-knowledge serveris. Tavo duomenys lieka tavo.",
+      "descriptionShort": "ES zero-knowledge infra"
+    }
+  },
+  "features": {
+    "sectionTitle": "Daugiau nei žinučių siuntimas",
+    "sectionSubtitle": "Saugumas nereiškia kompromisų. Turtingos funkcijos, jokių nuolaidų.",
+    "threads": {
+      "title": "Threads",
+      "description": "Atsakyk į bet kurią žinutę ir pradėk sutelktą šalutinį pokalbį. Pagrindinis pokalbis lieka švarus, kol tu giliniesi į bet kurią temą."
+    },
+    "posts": {
+      "title": "Posts",
+      "description": "Dalinkis idėjomis, kurias verta išsaugoti. Ilgi įrašai su turtingu formatuojimu gyvuoja šalia tavo pokalbio — jie nedingsta kaip žinutės."
+    },
+    "duressPin": {
+      "title": "Duress PIN",
+      "description": "Antrasis PIN kodas, kuris tyliai rodo netikrus pokalbius, jei būsi priverstas atrakinti. Tikrosios žinutės lieka paslėptos. Atstatyk viską, kai esi saugus."
+    },
+    "encryptedMedia": {
+      "title": "Šifruota medija",
+      "description": "Dalinkis nuotraukomis, vaizdo įrašais ir dokumentais su tokiu pat Signal lygio šifravimu kaip ir tavo žinutės. Viskas automatiškai ištrinama po dviejų savaičių."
+    }
+  },
+  "screenshots": {
+    "sectionTitle": "Pažiūrėk, kaip tai veikia",
+    "sectionSubtitle": "Šviesi arba tamsi tema. Tavo pokalbiai, tavo pasirinkimas.",
+    "chatCaption": "Ištisinio šifravimo pokalbiai",
+    "threadsCaption": "Sutelkti šalutiniai pokalbiai gijose",
+    "postsCaption": "Ilgalaikiai įrašai, kurie išlieka",
+    "postDetailCaption": "Detalus įrašo vaizdas su komentarais",
+    "chatLightAlt": "Dueydo pokalbis šviesioje temoje",
+    "chatDarkAlt": "Dueydo pokalbis tamsioje temoje",
+    "threadLightAlt": "Dueydo gija šviesioje temoje",
+    "threadDarkAlt": "Dueydo gija tamsioje temoje",
+    "postsLightAlt": "Dueydo įrašai šviesioje temoje",
+    "postsDarkAlt": "Dueydo įrašai tamsioje temoje",
+    "postDetailLightAlt": "Dueydo įrašo detalės šviesioje temoje",
+    "postDetailDarkAlt": "Dueydo įrašo detalės tamsioje temoje"
+  },
+  "closing": {
+    "quote": "\"Net vienuoliai, kurie virė geriausią alų,<br class=\"hidden md:inline\"/>reikėjo sienų, kad apsaugotų savo pokalbius.\"",
+    "comingSoon": "Jau greitai"
+  },
+  "footer": {
+    "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>"
+  },
+  "schema": {
+    "appDescription": "Privatus saugus pokalbis draugams. Ištisinis šifravimas su Signal Protocol, automatiškai ištrinamos žinutės, gijos ir įrašai.",
+    "orgDescription": "dizyx kuria privatumui orientuotą programinę įrangą su ES infrastruktūra. Boutique AI konsultacijos, specializuojančios agentinėse darbo eigose ir saugiose komunikacijose.",
+    "websiteDescription": "Ištisinis šifravimas su Signal Protocol. Sukurta draugams, kurie vertina privatumą, saugumą ir tikrus pokalbius."
+  },
+  "languageSwitcher": {
+    "label": "Kalba"
+  }
+}

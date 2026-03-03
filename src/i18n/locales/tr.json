@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Dueydo: Arkadaşlar İçin Gizli ve Güvenli Sohbet",
+    "description": "Signal Protocol ile uçtan uca şifreli mesajlaşma. Gizliliğe, güvenliğe ve gerçek sohbete değer veren arkadaşlar için tasarlandı. Yakında.",
+    "ogImageAlt": "Dueydo — Arkadaşlar için gizli ve güvenli sohbet"
+  },
+  "hero": {
+    "tagline": "Arkadaşlar için gizli ve güvenli sohbet 🍻"
+  },
+  "pillars": {
+    "srOnlyHeading": "İlkelerimiz",
+    "fortified": {
+      "title": "Tahkimli",
+      "description": "Signal Protocol şifreleme. Sözlerin yalnızca sana ait.",
+      "descriptionShort": "Signal Protocol E2EE"
+    },
+    "ephemeral": {
+      "title": "Geçici",
+      "description": "Mesajlar iki hafta sonra kaybolur. Arşiv yok, iz yok.",
+      "descriptionShort": "14 günde otomatik silinir"
+    },
+    "sovereign": {
+      "title": "Bağımsız",
+      "description": "AB altyapısı. Sıfır bilgi sunucusu. Verilerin sana ait kalır.",
+      "descriptionShort": "AB sıfır bilgi altyapısı"
+    }
+  },
+  "features": {
+    "sectionTitle": "Bir Mesajlaşma Uygulamasından Fazlası",
+    "sectionSubtitle": "Güvenlik, eksikliğe razı olmak demek olmamalı. Zengin özellikler, sıfır taviz.",
+    "threads": {
+      "title": "Threads",
+      "description": "Herhangi bir mesaja yanıt vererek odaklı bir yan sohbet başlat. Ana sohbet düzenli kalırken, istediğin konuya derinlemesine dal."
+    },
+    "posts": {
+      "title": "Posts",
+      "description": "Saklamaya değer fikirleri paylaş. Zengin biçimlendirmeli uzun yazılar sohbetinle yan yana yaşar — mesajlar gibi kaybolmazlar."
+    },
+    "duressPin": {
+      "title": "Duress PIN",
+      "description": "Kilidi açmaya zorlanırsan sessizce sahte konuşmaları gösteren ikinci bir PIN. Gerçek mesajların gizli kalır. Güvende olduğunda her şeyi geri yükle."
+    },
+    "encryptedMedia": {
+      "title": "Şifreli Medya",
+      "description": "Fotoğrafları, videoları ve belgeleri mesajlarınla aynı Signal düzeyinde şifrelemeyle paylaş. Her şey iki hafta sonra otomatik silinir."
+    }
+  },
+  "screenshots": {
+    "sectionTitle": "Uygulamada Gör",
+    "sectionSubtitle": "Açık tema veya koyu tema. Sohbetlerin, senin tarzın.",
+    "chatCaption": "Uçtan uca şifreli sohbetler",
+    "threadsCaption": "Thread'lerde odaklı yan sohbetler",
+    "postsCaption": "Kalıcı uzun yazılar",
+    "postDetailCaption": "Yorumlu detaylı gönderi görünümü",
+    "chatLightAlt": "Dueydo sohbet açık tema",
+    "chatDarkAlt": "Dueydo sohbet koyu tema",
+    "threadLightAlt": "Dueydo thread açık tema",
+    "threadDarkAlt": "Dueydo thread koyu tema",
+    "postsLightAlt": "Dueydo gönderiler açık tema",
+    "postsDarkAlt": "Dueydo gönderiler koyu tema",
+    "postDetailLightAlt": "Dueydo gönderi detayı açık tema",
+    "postDetailDarkAlt": "Dueydo gönderi detayı koyu tema"
+  },
+  "closing": {
+    "quote": "\"En kaliteli birayı yapan keşişler bile<br class=\"hidden md:inline\"/>sohbetlerini korumak için duvarlara ihtiyaç duydu.\"",
+    "comingSoon": "Yakında"
+  },
+  "footer": {
+    "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>"
+  },
+  "schema": {
+    "appDescription": "Arkadaşlar için gizli ve güvenli sohbet. Signal Protocol ile uçtan uca şifreli mesajlaşma, otomatik silinen mesajlar, thread'ler ve gönderiler.",
+    "orgDescription": "dizyx, AB altyapısıyla gizlilik öncelikli yazılımlar geliştirir. Otonom iş akışları ve güvenli iletişim konusunda uzmanlaşmış butik yapay zeka danışmanlığı.",
+    "websiteDescription": "Signal Protocol ile uçtan uca şifreli mesajlaşma. Gizliliğe, güvenliğe ve gerçek sohbete değer veren arkadaşlar için tasarlandı."
+  },
+  "languageSwitcher": {
+    "label": "Dil"
+  }
+}

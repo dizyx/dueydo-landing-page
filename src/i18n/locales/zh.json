@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Dueydo：朋友间的私密安全聊天",
+    "description": "基于 Signal Protocol 的端到端加密通讯。为珍视隐私、安全和真实对话的朋友而生。即将上线。",
+    "ogImageAlt": "Dueydo — 朋友间的私密安全聊天"
+  },
+  "hero": {
+    "tagline": "朋友间的私密安全聊天 🍻"
+  },
+  "pillars": {
+    "srOnlyHeading": "我们的理念",
+    "fortified": {
+      "title": "坚不可摧",
+      "description": "Signal Protocol 加密。你的话语只属于你。",
+      "descriptionShort": "Signal Protocol E2EE"
+    },
+    "ephemeral": {
+      "title": "阅后即焚",
+      "description": "消息两周后自动消失。无存档，无痕迹。",
+      "descriptionShort": "14 天自动删除"
+    },
+    "sovereign": {
+      "title": "数据自主",
+      "description": "欧盟基础设施。零知识服务器。你的数据始终归你所有。",
+      "descriptionShort": "欧盟 zero-knowledge 基础设施"
+    }
+  },
+  "features": {
+    "sectionTitle": "不止于聊天",
+    "sectionSubtitle": "安全不意味着将就。丰富功能，零妥协。",
+    "threads": {
+      "title": "Threads",
+      "description": "回复任意消息即可开启专注的侧边对话。主聊天保持清爽，同时你可以深入探讨任何话题。"
+    },
+    "posts": {
+      "title": "Posts",
+      "description": "分享值得留存的想法。支持富文本格式的长文与聊天共存——不会像消息一样消失。"
+    },
+    "duressPin": {
+      "title": "Duress PIN",
+      "description": "当你被迫解锁时，第二个 PIN 码会悄然展示伪造的对话。真实消息始终隐藏。安全后可恢复一切。"
+    },
+    "encryptedMedia": {
+      "title": "加密媒体",
+      "description": "以与消息相同的 Signal 级别加密分享照片、视频和文档。所有内容两周后自动删除。"
+    }
+  },
+  "screenshots": {
+    "sectionTitle": "亲眼看看",
+    "sectionSubtitle": "浅色模式或深色模式。你的对话，你做主。",
+    "chatCaption": "端到端加密对话",
+    "threadsCaption": "话题中的专注侧边对话",
+    "postsCaption": "持久保存的长文帖子",
+    "postDetailCaption": "带评论的帖子详情",
+    "chatLightAlt": "Dueydo 聊天浅色模式",
+    "chatDarkAlt": "Dueydo 聊天深色模式",
+    "threadLightAlt": "Dueydo 话题浅色模式",
+    "threadDarkAlt": "Dueydo 话题深色模式",
+    "postsLightAlt": "Dueydo 帖子浅色模式",
+    "postsDarkAlt": "Dueydo 帖子深色模式",
+    "postDetailLightAlt": "Dueydo 帖子详情浅色模式",
+    "postDetailDarkAlt": "Dueydo 帖子详情深色模式"
+  },
+  "closing": {
+    "quote": "\"即使是酿出最好麦酒的修道士，<br class=\"hidden md:inline\"/>也需要围墙来守护他们的对话。\"",
+    "comingSoon": "即将上线"
+  },
+  "footer": {
+    "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>"
+  },
+  "schema": {
+    "appDescription": "朋友间的私密安全聊天。基于 Signal Protocol 的端到端加密通讯，自动删除消息、话题和帖子功能。",
+    "orgDescription": "dizyx 打造以隐私为先的软件，基于欧盟基础设施。专注于智能体工作流和安全通信的精品 AI 咨询公司。",
+    "websiteDescription": "基于 Signal Protocol 的端到端加密通讯。为珍视隐私、安全和真实对话的朋友而生。"
+  },
+  "languageSwitcher": {
+    "label": "语言"
+  }
+}

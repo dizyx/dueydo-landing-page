@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Dueydo: Zasebni varni klepet za prijatelje",
+    "description": "Sporočila s šifriranjem od konca do konca prek Signal Protocola. Ustvarjen za prijatelje, ki cenijo zasebnost, varnost in pristen pogovor. Prihaja kmalu.",
+    "ogImageAlt": "Dueydo — Zasebni varni klepet za prijatelje"
+  },
+  "hero": { "tagline": "Zasebni varni klepet za prijatelje 🍻" },
+  "pillars": {
+    "srOnlyHeading": "Naša načela",
+    "fortified": { "title": "Utrjen", "description": "Šifriranje s Signal Protocolom. Vaše besede so samo vaše.", "descriptionShort": "Signal Protocol E2EE" },
+    "ephemeral": { "title": "Minljiv", "description": "Sporočila izginejo po dveh tednih. Brez arhivov, brez sledi.", "descriptionShort": "Samodejno brisanje v 14 dneh" },
+    "sovereign": { "title": "Suveren", "description": "Infrastruktura v EU. Strežnik brez vpogleda v podatke. Vaši podatki ostanejo vaši.", "descriptionShort": "EU infrastruktura brez vpogleda" }
+  },
+  "features": {
+    "sectionTitle": "Več kot sporočilnik",
+    "sectionSubtitle": "Varnost ne pomeni kompromisov. Bogate funkcije, nič odrekanja.",
+    "threads": { "title": "Niti", "description": "Odgovorite na katero koli sporočilo in začnite osredotočen stranski pogovor. Glavni klepet ostane pregleden, medtem ko se poglobite v katero koli temo." },
+    "posts": { "title": "Objave", "description": "Delite ideje, ki jih je vredno ohraniti. Daljše objave z bogatim oblikovanjem živijo ob vašem klepetu — ne izginejo kot sporočila." },
+    "duressPin": { "title": "Duress PIN", "description": "Drugi PIN, ki tiho prikaže lažne pogovore, če vas prisilijo odkleniti. Vaša prava sporočila ostanejo skrita. Obnovite vse, ko ste na varnem." },
+    "encryptedMedia": { "title": "Šifrirani mediji", "description": "Delite fotografije, videe in dokumente z enakim šifriranjem na ravni Signal kot vaša sporočila. Vse se samodejno izbriše po dveh tednih." }
+  },
+  "screenshots": {
+    "sectionTitle": "Poglejte v živo", "sectionSubtitle": "Svetli ali temni način. Vaši pogovori, vaša pravila.",
+    "chatCaption": "Pogovori s šifriranjem od konca do konca", "threadsCaption": "Osredotočeni stranski pogovori v nitih",
+    "postsCaption": "Daljše objave, ki ostanejo", "postDetailCaption": "Podrobnosti objave s komentarji",
+    "chatLightAlt": "Dueydo klepet v svetlem načinu", "chatDarkAlt": "Dueydo klepet v temnem načinu",
+    "threadLightAlt": "Dueydo nit v svetlem načinu", "threadDarkAlt": "Dueydo nit v temnem načinu",
+    "postsLightAlt": "Dueydo objave v svetlem načinu", "postsDarkAlt": "Dueydo objave v temnem načinu",
+    "postDetailLightAlt": "Dueydo podrobnosti objave v svetlem načinu", "postDetailDarkAlt": "Dueydo podrobnosti objave v temnem načinu"
+  },
+  "closing": { "quote": "\"Tudi menihi, ki so varili najboljša piva,<br class=\"hidden md:inline\"/>so potrebovali zidove, da so zaščitili svoje pogovore.\"", "comingSoon": "Prihaja kmalu" },
+  "footer": { "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>" },
+  "schema": {
+    "appDescription": "Zasebni varni klepet za prijatelje. Sporočila s šifriranjem od konca do konca prek Signal Protocola, samodejno brisanje sporočil, niti in objave.",
+    "orgDescription": "dizyx gradi programsko opremo z zasebnostjo na prvem mestu in infrastrukturo v EU. Butična AI svetovalnica, specializirana za agentne delovne procese in varno komunikacijo.",
+    "websiteDescription": "Sporočila s šifriranjem od konca do konca prek Signal Protocola. Ustvarjen za prijatelje, ki cenijo zasebnost, varnost in pristen pogovor."
+  },
+  "languageSwitcher": { "label": "Jezik" }
+}

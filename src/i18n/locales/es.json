@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Dueydo: Chat privado y seguro para amigos",
+    "description": "Mensajería cifrada de extremo a extremo con Signal Protocol. Hecho para amigos que valoran la privacidad, la seguridad y las conversaciones reales. Próximamente.",
+    "ogImageAlt": "Dueydo — Chat privado y seguro para amigos"
+  },
+  "hero": {
+    "tagline": "Chat privado y seguro para amigos 🍻"
+  },
+  "pillars": {
+    "srOnlyHeading": "Nuestros principios",
+    "fortified": {
+      "title": "Blindado",
+      "description": "Cifrado con Signal Protocol. Tus palabras son solo tuyas.",
+      "descriptionShort": "Signal Protocol E2EE"
+    },
+    "ephemeral": {
+      "title": "Efímero",
+      "description": "Los mensajes desaparecen a las dos semanas. Sin archivos, sin rastros.",
+      "descriptionShort": "Se eliminan en 14 días"
+    },
+    "sovereign": {
+      "title": "Soberano",
+      "description": "Infraestructura en la UE. Servidor zero-knowledge. Tus datos siguen siendo tuyos.",
+      "descriptionShort": "Infra zero-knowledge en la UE"
+    }
+  },
+  "features": {
+    "sectionTitle": "Más que un mensajero",
+    "sectionSubtitle": "La seguridad no debería significar renunciar a nada. Funciones completas, sin compromisos.",
+    "threads": {
+      "title": "Hilos",
+      "description": "Responde a cualquier mensaje para iniciar una conversación paralela enfocada. El chat principal se mantiene limpio mientras profundizas en cualquier tema."
+    },
+    "posts": {
+      "title": "Posts",
+      "description": "Comparte ideas que vale la pena conservar. Publicaciones extensas con formato enriquecido conviven con tu chat — no desaparecen como los mensajes."
+    },
+    "duressPin": {
+      "title": "Duress PIN",
+      "description": "Un segundo PIN que muestra silenciosamente conversaciones falsas si te obligan a desbloquear. Tus mensajes reales permanecen ocultos. Recupéralo todo cuando estés a salvo."
+    },
+    "encryptedMedia": {
+      "title": "Multimedia cifrada",
+      "description": "Comparte fotos, vídeos y documentos con el mismo cifrado Signal que tus mensajes. Todo se elimina automáticamente a las dos semanas."
+    }
+  },
+  "screenshots": {
+    "sectionTitle": "Míralo en acción",
+    "sectionSubtitle": "Modo claro o modo oscuro. Tus conversaciones, a tu manera.",
+    "chatCaption": "Conversaciones cifradas de extremo a extremo",
+    "threadsCaption": "Conversaciones enfocadas en hilos",
+    "postsCaption": "Publicaciones extensas que perduran",
+    "postDetailCaption": "Detalle de publicación con comentarios",
+    "chatLightAlt": "Chat de Dueydo en modo claro",
+    "chatDarkAlt": "Chat de Dueydo en modo oscuro",
+    "threadLightAlt": "Hilo de Dueydo en modo claro",
+    "threadDarkAlt": "Hilo de Dueydo en modo oscuro",
+    "postsLightAlt": "Posts de Dueydo en modo claro",
+    "postsDarkAlt": "Posts de Dueydo en modo oscuro",
+    "postDetailLightAlt": "Detalle de post de Dueydo en modo claro",
+    "postDetailDarkAlt": "Detalle de post de Dueydo en modo oscuro"
+  },
+  "closing": {
+    "quote": "\"Hasta los monjes que elaboraban las mejores cervezas<br class=\"hidden md:inline\"/>necesitaban muros para proteger sus conversaciones.\"",
+    "comingSoon": "Próximamente"
+  },
+  "footer": {
+    "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>"
+  },
+  "schema": {
+    "appDescription": "Chat privado y seguro para amigos. Mensajería cifrada de extremo a extremo con Signal Protocol, mensajes que se eliminan automáticamente, hilos y publicaciones.",
+    "orgDescription": "dizyx desarrolla software con privacidad ante todo e infraestructura en la UE. Consultoría boutique de IA especializada en flujos agénticos y comunicaciones seguras.",
+    "websiteDescription": "Mensajería cifrada de extremo a extremo con Signal Protocol. Hecho para amigos que valoran la privacidad, la seguridad y las conversaciones reales."
+  },
+  "languageSwitcher": {
+    "label": "Idioma"
+  }
+}

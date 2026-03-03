@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Dueydo: Privatni sigurni chat za prijatelje",
+    "description": "Poruke s end-to-end enkripcijom putem Signal Protocola. Stvoren za prijatelje kojima su privatnost, sigurnost i pravi razgovor na prvom mjestu. Uskoro dostupno.",
+    "ogImageAlt": "Dueydo — Privatni sigurni chat za prijatelje"
+  },
+  "hero": { "tagline": "Privatni sigurni chat za prijatelje 🍻" },
+  "pillars": {
+    "srOnlyHeading": "Naša načela",
+    "fortified": { "title": "Utvrđen", "description": "Signal Protocol enkripcija. Vaše riječi ostaju samo vaše.", "descriptionShort": "Signal Protocol E2EE" },
+    "ephemeral": { "title": "Prolazan", "description": "Poruke nestaju nakon dva tjedna. Bez arhiva, bez tragova.", "descriptionShort": "Automatsko brisanje za 14 dana" },
+    "sovereign": { "title": "Suveren", "description": "EU infrastruktura. Poslužitelj s nultim znanjem. Vaši podaci ostaju vaši.", "descriptionShort": "EU infrastruktura s nultim znanjem" }
+  },
+  "features": {
+    "sectionTitle": "Više od messengera",
+    "sectionSubtitle": "Sigurnost ne znači odricanje. Bogate značajke, nula kompromisa.",
+    "threads": { "title": "Teme", "description": "Odgovorite na bilo koju poruku i pokrenite fokusirani sporedni razgovor. Glavni chat ostaje pregledan dok dublje ulazite u bilo koju temu." },
+    "posts": { "title": "Objave", "description": "Dijelite ideje vrijedne čuvanja. Dulje objave s bogatim formatiranjem žive uz vaš chat — ne nestaju poput poruka." },
+    "duressPin": { "title": "Duress PIN", "description": "Drugi PIN koji tiho prikazuje lažne razgovore ako vas prisile da otključate. Vaše prave poruke ostaju skrivene. Vratite sve kad ste na sigurnom." },
+    "encryptedMedia": { "title": "Enkriptirani mediji", "description": "Dijelite fotografije, videozapise i dokumente s istom Signal-razinom enkripcije kao vaše poruke. Sve se automatski briše nakon dva tjedna." }
+  },
+  "screenshots": {
+    "sectionTitle": "Pogledajte uživo", "sectionSubtitle": "Svijetli ili tamni način rada. Vaši razgovori, vaša pravila.",
+    "chatCaption": "End-to-end enkriptirani razgovori", "threadsCaption": "Fokusirani sporedni razgovori u temama",
+    "postsCaption": "Dulje objave koje ostaju", "postDetailCaption": "Detalj objave s komentarima",
+    "chatLightAlt": "Dueydo chat u svijetlom načinu", "chatDarkAlt": "Dueydo chat u tamnom načinu",
+    "threadLightAlt": "Dueydo tema u svijetlom načinu", "threadDarkAlt": "Dueydo tema u tamnom načinu",
+    "postsLightAlt": "Dueydo objave u svijetlom načinu", "postsDarkAlt": "Dueydo objave u tamnom načinu",
+    "postDetailLightAlt": "Dueydo detalj objave u svijetlom načinu", "postDetailDarkAlt": "Dueydo detalj objave u tamnom načinu"
+  },
+  "closing": { "quote": "\"Čak su i redovnici koji su kuhali najbolja piva<br class=\"hidden md:inline\"/>trebali zidove da zaštite svoje razgovore.\"", "comingSoon": "Uskoro dostupno" },
+  "footer": { "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>" },
+  "schema": {
+    "appDescription": "Privatni sigurni chat za prijatelje. Poruke s end-to-end enkripcijom putem Signal Protocola, automatsko brisanje poruka, teme i objave.",
+    "orgDescription": "dizyx razvija softver s prioritetom na privatnost i EU infrastrukturom. Butik AI konzultantska tvrtka specijalizirana za agentne radne procese i sigurnu komunikaciju.",
+    "websiteDescription": "Poruke s end-to-end enkripcijom putem Signal Protocola. Stvoren za prijatelje kojima su privatnost, sigurnost i pravi razgovor na prvom mjestu."
+  },
+  "languageSwitcher": { "label": "Jezik" }
+}

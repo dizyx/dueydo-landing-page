@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Dueydo: Privat og sikker chat for venner",
+    "description": "End-to-end-krypterte meldinger med Signal Protocol. Laget for venner som setter pris på personvern, sikkerhet og ekte samtaler. Kommer snart.",
+    "ogImageAlt": "Dueydo — Privat og sikker chat for venner"
+  },
+  "hero": {
+    "tagline": "Privat og sikker chat for venner 🍻"
+  },
+  "pillars": {
+    "srOnlyHeading": "Våre prinsipper",
+    "fortified": { "title": "Befestet", "description": "Signal Protocol-kryptering. Dine ord tilhører bare deg.", "descriptionShort": "Signal Protocol E2EE" },
+    "ephemeral": { "title": "Flyktig", "description": "Meldinger forsvinner etter to uker. Ingen arkiver, ingen spor.", "descriptionShort": "Slettes automatisk etter 14 dager" },
+    "sovereign": { "title": "Suveren", "description": "EU-infrastruktur. Zero-knowledge-server. Dine data forblir dine.", "descriptionShort": "EU zero-knowledge infra" }
+  },
+  "features": {
+    "sectionTitle": "Mer enn en meldingsapp",
+    "sectionSubtitle": "Sikkerhet skal ikke bety kompromisser. Avanserte funksjoner, null avkall.",
+    "threads": { "title": "Threads", "description": "Svar på en hvilken som helst melding for å starte en fokusert sidesamtale. Hovedchatten forblir ryddig mens du dykker dypt inn i et emne." },
+    "posts": { "title": "Posts", "description": "Del ideer som er verdt å ta vare på. Lengre innlegg med rik formatering lever side om side med chatten din — de forsvinner ikke slik meldinger gjør." },
+    "duressPin": { "title": "Duress PIN", "description": "En ekstra PIN-kode som stille viser falske samtaler hvis du tvinges til å låse opp. De ekte meldingene dine forblir skjulte. Gjenopprett alt når du er i sikkerhet." },
+    "encryptedMedia": { "title": "Krypterte medier", "description": "Del bilder, videoer og dokumenter med den samme Signal-krypteringen som meldingene dine. Alt slettes automatisk etter to uker." }
+  },
+  "screenshots": {
+    "sectionTitle": "Se det i aksjon",
+    "sectionSubtitle": "Lyst eller mørkt modus. Dine samtaler, på din måte.",
+    "chatCaption": "End-to-end-krypterte samtaler",
+    "threadsCaption": "Fokuserte sidesamtaler i tråder",
+    "postsCaption": "Lengre innlegg som varer",
+    "postDetailCaption": "Detaljert innlegg med kommentarer",
+    "chatLightAlt": "Dueydo-chat i lyst modus", "chatDarkAlt": "Dueydo-chat i mørkt modus",
+    "threadLightAlt": "Dueydo-tråd i lyst modus", "threadDarkAlt": "Dueydo-tråd i mørkt modus",
+    "postsLightAlt": "Dueydo-innlegg i lyst modus", "postsDarkAlt": "Dueydo-innlegg i mørkt modus",
+    "postDetailLightAlt": "Dueydo-innleggsdetalj i lyst modus", "postDetailDarkAlt": "Dueydo-innleggsdetalj i mørkt modus"
+  },
+  "closing": {
+    "quote": "\"Selv munkene som brygget det fineste ølet<br class=\"hidden md:inline\"/>trengte murer for å verne om samtalene sine.\"",
+    "comingSoon": "Kommer snart"
+  },
+  "footer": { "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>" },
+  "schema": {
+    "appDescription": "Privat og sikker chat for venner. End-to-end-krypterte meldinger med Signal Protocol, automatisk slettende meldinger, tråder og innlegg.",
+    "orgDescription": "dizyx bygger personvernfokusert programvare med EU-infrastruktur. Boutique AI-konsulentselskap som spesialiserer seg på agentic workflows og sikker kommunikasjon.",
+    "websiteDescription": "End-to-end-krypterte meldinger med Signal Protocol. Laget for venner som setter pris på personvern, sikkerhet og ekte samtaler."
+  },
+  "languageSwitcher": { "label": "Språk" }
+}

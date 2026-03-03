@@ -1,0 +1,562 @@
+---
+import '../styles/fonts.css'
+import '../styles/global.css'
+import { getTranslations, locales, localeConfig, getCanonicalUrl, defaultLocale, getLocalePath } from '../i18n';
+import type { Locale } from '../i18n';
+import ShieldLogo from './ShieldLogo.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+const meta = localeConfig[locale];
+const dir = meta.dir;
+const canonicalUrl = getCanonicalUrl(locale);
+const siteBase = 'https://dueydo.com';
+
+// Build hreflang entries
+const hreflangs = locales.map((l) => ({
+  locale: l,
+  href: getCanonicalUrl(l),
+  hreflang: l,
+}));
+
+// Build og:locale:alternate list (all except current)
+const ogAlternates = locales.filter((l) => l !== locale);
+
+// CJK / Devanagari font hint
+const fontHint = meta.fontHint ?? '';
+
+// Schema.org structured data
+const schemaApp = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Dueydo',
+  applicationCategory: 'CommunicationApplication',
+  operatingSystem: 'iOS, Android',
+  description: t.schema.appDescription,
+  url: siteBase,
+  inLanguage: locale,
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  featureList: [
+    'Signal Protocol end-to-end encryption',
+    'Auto-deleting messages (14 days)',
+    'Threaded conversations',
+    'Long-form posts',
+    'Duress PIN for plausible deniability',
+    'Encrypted media sharing',
+    'EU-based zero-knowledge infrastructure',
+  ],
+};
+
+const schemaOrg = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'dizyx',
+  url: 'https://dizyx.com',
+  logo: `${siteBase}/favicon.svg`,
+  description: t.schema.orgDescription,
+  inLanguage: locale,
+  sameAs: [],
+};
+
+const schemaWebsite = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Dueydo',
+  url: siteBase,
+  inLanguage: locale,
+  description: t.schema.websiteDescription,
+  publisher: { '@type': 'Organization', name: 'dizyx', url: 'https://dizyx.com' },
+};
+---
+
+<!doctype html>
+<html lang={locale} dir={dir}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content={t.meta.description} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- hreflang tags -->
+    {hreflangs.map(({ hreflang, href }) => (
+      <link rel="alternate" hreflang={hreflang} href={href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={`${siteBase}/`} />
+
+    <!-- Favicons & Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#C9A84C" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={t.meta.title} />
+    <meta property="og:description" content={t.meta.description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Dueydo" />
+    <meta property="og:locale" content={meta.ogLocale} />
+    {ogAlternates.map((l) => (
+      <meta property="og:locale:alternate" content={localeConfig[l].ogLocale} />
+    ))}
+    <meta property="og:image" content={`${siteBase}/og-image.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={t.meta.ogImageAlt} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={t.meta.title} />
+    <meta name="twitter:description" content={t.meta.description} />
+    <meta name="twitter:image" content={`${siteBase}/og-image.png`} />
+    <meta name="twitter:image:alt" content={t.meta.ogImageAlt} />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaApp)} />
+    <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)} />
+    <script type="application/ld+json" set:html={JSON.stringify(schemaWebsite)} />
+
+    <title>{t.meta.title}</title>
+
+    {/* CJK / Devanagari font override */}
+    {fontHint && (
+      <style set:html={`body { font-family: ${fontHint}, 'Inter', system-ui, sans-serif !important; }`} />
+    )}
+  </head>
+  <body class="min-h-screen bg-bg-primary text-text-primary font-body">
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+      <button id="lang-toggle" class="lang-toggle" aria-label={t.languageSwitcher.label}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M2 12h20"/>
+          <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+        </svg>
+        <span class="text-xs font-medium">{meta.name}</span>
+      </button>
+      <div id="lang-dropdown" class="lang-dropdown hidden">
+        {locales.map((l) => (
+          <a
+            href={l === defaultLocale ? '/' : `/${l}/`}
+            class:list={['lang-option', { active: l === locale }]}
+          >
+            {localeConfig[l].name}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Background Canvas -->
+    <canvas id="bg-canvas" class="fixed inset-0 -z-10"></canvas>
+
+    <!-- Scrollable page -->
+    <div class="relative z-10">
+
+      <!-- Hero Section — full viewport -->
+      <section class="h-dvh flex flex-col items-center justify-center px-5 md:px-6">
+
+        <!-- Logo & Name (no .reveal — must be visible for LCP) -->
+        <div class="text-center mb-6 md:mb-10">
+          <ShieldLogo class="mx-auto mb-3 md:mb-6 w-12 h-14 md:w-20 md:h-[5.5rem]" />
+
+          <h1 class="font-display text-4xl md:text-7xl tracking-wide text-bg-dark mb-2 md:mb-4"
+              style="text-shadow: 0 1px 2px rgba(0,0,0,0.06);">
+            Dueydo
+          </h1>
+          <p class="font-accent text-lg md:text-2xl text-text-secondary italic tracking-wide"
+             set:html={t.hero.tagline} />
+        </div>
+
+        <!-- Three Pillars — philosophy row -->
+        <h2 class="sr-only" set:html={t.pillars.srOnlyHeading} />
+        <div class="flex flex-row md:grid md:grid-cols-3 gap-3 md:gap-6 max-w-3xl w-full mb-6 md:mb-10 reveal" style="transition-delay: 0.15s;">
+          <div class="flex-1 text-center px-3 py-4 md:p-6 rounded-lg bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
+            <div class="mx-auto mb-2 md:mb-3 w-6 h-6 md:w-8 md:h-8">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                <path d="M12 2l8 4v5c0 5.5-3.8 10.7-8 12-4.2-1.3-8-6.5-8-12V6l8-4z"/>
+                <path d="M12 8v4m0 2h.01" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3 class="font-heading text-xs md:text-sm uppercase tracking-widest text-gold-dim mb-1 md:mb-2">{t.pillars.fortified.title}</h3>
+            <p class="hidden md:block text-sm text-text-tertiary leading-relaxed">{t.pillars.fortified.description}</p>
+            <p class="md:hidden text-xs text-text-tertiary leading-snug">{t.pillars.fortified.descriptionShort}</p>
+          </div>
+          <div class="flex-1 text-center px-3 py-4 md:p-6 rounded-lg bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
+            <div class="mx-auto mb-2 md:mb-3 w-6 h-6 md:w-8 md:h-8">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                <path d="M6 2h12M6 22h12M7 2v4a5 5 0 005 5 5 5 0 005-5V2M7 22v-4a5 5 0 015-5 5 5 0 015 5v4"/>
+                <circle cx="12" cy="12" r="1" fill="#C9A84C" stroke="none"/>
+              </svg>
+            </div>
+            <h3 class="font-heading text-xs md:text-sm uppercase tracking-widest text-gold-dim mb-1 md:mb-2">{t.pillars.ephemeral.title}</h3>
+            <p class="hidden md:block text-sm text-text-tertiary leading-relaxed">{t.pillars.ephemeral.description}</p>
+            <p class="md:hidden text-xs text-text-tertiary leading-snug">{t.pillars.ephemeral.descriptionShort}</p>
+          </div>
+          <div class="flex-1 text-center px-3 py-4 md:p-6 rounded-lg bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
+            <div class="mx-auto mb-2 md:mb-3 w-6 h-6 md:w-8 md:h-8">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                <path d="M4 20L18 4M4 20l2-2m-2 2l-2-2m16-12l2 2m-2-2l-2-2"/>
+                <path d="M20 20L6 4M20 20l-2-2m2 2l2-2M6 4L4 6M6 4l2-2"/>
+              </svg>
+            </div>
+            <h3 class="font-heading text-xs md:text-sm uppercase tracking-widest text-gold-dim mb-1 md:mb-2">{t.pillars.sovereign.title}</h3>
+            <p class="hidden md:block text-sm text-text-tertiary leading-relaxed">{t.pillars.sovereign.description}</p>
+            <p class="md:hidden text-xs text-text-tertiary leading-snug">{t.pillars.sovereign.descriptionShort}</p>
+          </div>
+        </div>
+
+        <!-- Scroll hint on desktop -->
+        <div class="hidden md:block absolute bottom-8 animate-bounce reveal" style="transition-delay: 0.6s;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 opacity-40">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Features Section — dark background -->
+      <section class="px-5 md:px-6 py-14 md:py-24 bg-bg-dark">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-8 md:mb-14 reveal">
+            <h2 class="font-heading text-sm md:text-base uppercase tracking-[0.2em] text-gold mb-3">{t.features.sectionTitle}</h2>
+            <p class="font-accent text-base md:text-lg text-text-inverse/70 italic">{t.features.sectionSubtitle}</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 reveal" style="transition-delay: 0.15s;">
+            <!-- Threads -->
+            <div class="p-5 md:p-7 rounded-xl bg-white/[0.06] shadow-lg shadow-black/20">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-8 h-8 md:w-9 md:h-9 shrink-0">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                    <path d="M14 10H8m4 4H8" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <h3 class="font-heading text-sm md:text-base uppercase tracking-widest text-gold">{t.features.threads.title}</h3>
+              </div>
+              <p class="text-sm text-text-inverse/60 leading-relaxed">{t.features.threads.description}</p>
+            </div>
+
+            <!-- Posts -->
+            <div class="p-5 md:p-7 rounded-xl bg-white/[0.06] shadow-lg shadow-black/20">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-8 h-8 md:w-9 md:h-9 shrink-0">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                    <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                    <path d="M14 2v6h6M8 13h8m-8 4h5"/>
+                  </svg>
+                </div>
+                <h3 class="font-heading text-sm md:text-base uppercase tracking-widest text-gold">{t.features.posts.title}</h3>
+              </div>
+              <p class="text-sm text-text-inverse/60 leading-relaxed">{t.features.posts.description}</p>
+            </div>
+
+            <!-- Duress PIN -->
+            <div class="p-5 md:p-7 rounded-xl bg-white/[0.06] shadow-lg shadow-black/20">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-8 h-8 md:w-9 md:h-9 shrink-0">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M9 12l2 2 4-4" stroke-width="2"/>
+                  </svg>
+                </div>
+                <h3 class="font-heading text-sm md:text-base uppercase tracking-widest text-gold">{t.features.duressPin.title}</h3>
+              </div>
+              <p class="text-sm text-text-inverse/60 leading-relaxed">{t.features.duressPin.description}</p>
+            </div>
+
+            <!-- Encrypted Media -->
+            <div class="p-5 md:p-7 rounded-xl bg-white/[0.06] shadow-lg shadow-black/20">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-8 h-8 md:w-9 md:h-9 shrink-0">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <path d="M21 15l-5-5L5 21"/>
+                  </svg>
+                </div>
+                <h3 class="font-heading text-sm md:text-base uppercase tracking-widest text-gold">{t.features.encryptedMedia.title}</h3>
+              </div>
+              <p class="text-sm text-text-inverse/60 leading-relaxed">{t.features.encryptedMedia.description}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screenshot Gallery — dark background continues -->
+      <section class="px-5 md:px-6 py-14 md:py-24 bg-bg-dark">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-10 md:mb-16 reveal">
+            <h2 class="font-heading text-sm md:text-base uppercase tracking-[0.2em] text-gold mb-3">{t.screenshots.sectionTitle}</h2>
+            <p class="font-accent text-base md:text-lg text-text-inverse/70 italic">{t.screenshots.sectionSubtitle}</p>
+          </div>
+
+          <!-- Chat -->
+          <div class="mb-12 md:mb-16 reveal" style="transition-delay: 0.1s;">
+            <div class="screenshot-pair">
+              <div class="phone-frame">
+                <img src="/screenshots/chat-light-mobile.png" alt={t.screenshots.chatLightAlt} loading="lazy" width="1170" height="2532" />
+              </div>
+              <div class="phone-frame">
+                <img src="/screenshots/chat-dark-mobile.png" alt={t.screenshots.chatDarkAlt} loading="lazy" width="1170" height="2532" />
+              </div>
+            </div>
+            <p class="text-center mt-4 md:mt-5 text-sm text-text-inverse/50 font-accent italic">{t.screenshots.chatCaption}</p>
+          </div>
+
+          <!-- Threads -->
+          <div class="mb-12 md:mb-16 reveal" style="transition-delay: 0.1s;">
+            <div class="screenshot-pair">
+              <div class="phone-frame">
+                <img src="/screenshots/thread-light-mobile.png" alt={t.screenshots.threadLightAlt} loading="lazy" width="1170" height="2532" />
+              </div>
+              <div class="phone-frame">
+                <img src="/screenshots/thread-dark-mobile.png" alt={t.screenshots.threadDarkAlt} loading="lazy" width="1170" height="2532" />
+              </div>
+            </div>
+            <p class="text-center mt-4 md:mt-5 text-sm text-text-inverse/50 font-accent italic">{t.screenshots.threadsCaption}</p>
+          </div>
+
+          <!-- Posts List -->
+          <div class="mb-12 md:mb-16 reveal" style="transition-delay: 0.1s;">
+            <div class="screenshot-pair">
+              <div class="phone-frame">
+                <img src="/screenshots/posts-list-light-mobile.png" alt={t.screenshots.postsLightAlt} loading="lazy" width="1170" height="2532" />
+              </div>
+              <div class="phone-frame">
+                <img src="/screenshots/posts-list-dark-mobile.png" alt={t.screenshots.postsDarkAlt} loading="lazy" width="1170" height="2532" />
+              </div>
+            </div>
+            <p class="text-center mt-4 md:mt-5 text-sm text-text-inverse/50 font-accent italic">{t.screenshots.postsCaption}</p>
+          </div>
+
+          <!-- Post Detail -->
+          <div class="reveal" style="transition-delay: 0.1s;">
+            <div class="screenshot-pair">
+              <div class="phone-frame">
+                <img src="/screenshots/post-detail-light-mobile.png" alt={t.screenshots.postDetailLightAlt} loading="lazy" width="1170" height="2532" />
+              </div>
+              <div class="phone-frame">
+                <img src="/screenshots/post-detail-dark-mobile.png" alt={t.screenshots.postDetailDarkAlt} loading="lazy" width="1170" height="2532" />
+              </div>
+            </div>
+            <p class="text-center mt-4 md:mt-5 text-sm text-text-inverse/50 font-accent italic">{t.screenshots.postDetailCaption}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quote + Coming Soon + Footer — dark background continues -->
+      <section class="px-5 md:px-6 pb-8 md:pb-12 bg-bg-dark">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="mb-6 md:mb-10 reveal">
+            <p class="font-accent text-base md:text-lg text-text-inverse/60 leading-relaxed italic"
+               set:html={t.closing.quote} />
+          </div>
+
+          <div class="mb-8 md:mb-12 reveal" style="transition-delay: 0.15s;">
+            <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gold bg-bg-dark">
+              <div class="w-2 h-2 rounded-full bg-gold animate-pulse"></div>
+              <span class="font-heading text-xs uppercase tracking-[0.2em] text-gold">{t.closing.comingSoon}</span>
+            </div>
+          </div>
+
+          <footer class="py-3 md:py-4">
+            <p class="text-xs text-text-inverse/60 tracking-wide" set:html={t.footer.copyright} />
+          </footer>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Language Switcher Toggle Script -->
+    <script>
+      const toggle = document.getElementById('lang-toggle');
+      const dropdown = document.getElementById('lang-dropdown');
+      if (toggle && dropdown) {
+        toggle.addEventListener('click', () => dropdown.classList.toggle('hidden'));
+        document.addEventListener('click', (e) => {
+          if (!toggle.contains(e.target as Node) && !dropdown.contains(e.target as Node)) {
+            dropdown.classList.add('hidden');
+          }
+        });
+      }
+    </script>
+
+    <!-- Background Animation -->
+    <script>
+      const canvas = document.getElementById('bg-canvas') as HTMLCanvasElement;
+      const ctx = canvas.getContext('2d')!;
+
+      let width: number, height: number;
+      let mouseX = -1, mouseY = -1;
+      let animFrame: number;
+
+      const COLORS = [
+        { r: 252, g: 250, b: 247 },
+        { r: 248, g: 245, b: 238 },
+        { r: 244, g: 240, b: 232 },
+        { r: 240, g: 236, b: 226 },
+        { r: 236, g: 231, b: 220 },
+      ];
+
+      const GOLD = { r: 201, g: 168, b: 76 };
+
+      interface Stone {
+        x: number; y: number; baseX: number; baseY: number;
+        size: number; colorIdx: number; phase: number; speed: number;
+        driftAngle: number; driftSpeed: number; driftRadius: number; driftPhase: number;
+      }
+
+      let stones: Stone[] = [];
+
+      function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        generateStones();
+      }
+
+      function generateStones() {
+        stones = [];
+        const spacing = 65;
+        const cols = Math.ceil(width / spacing) + 3;
+        const rows = Math.ceil(height / spacing) + 3;
+        for (let r = 0; r < rows; r++) {
+          for (let c = 0; c < cols; c++) {
+            const baseX = c * spacing + (r % 2 ? spacing / 2 : 0) + (Math.random() - 0.5) * 20;
+            const baseY = r * spacing + (Math.random() - 0.5) * 20;
+            stones.push({
+              x: baseX, y: baseY, baseX, baseY,
+              size: spacing * 0.35 + Math.random() * spacing * 0.3,
+              colorIdx: Math.floor(Math.random() * COLORS.length),
+              phase: Math.random() * Math.PI * 2,
+              speed: 0.2 + Math.random() * 0.3,
+              driftAngle: Math.random() * Math.PI * 2,
+              driftSpeed: 0.15 + Math.random() * 0.25,
+              driftRadius: 8 + Math.random() * 16,
+              driftPhase: Math.random() * Math.PI * 2,
+            });
+          }
+        }
+      }
+
+      function draw(time: number) {
+        const t = time * 0.001;
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = '#FAF8F3';
+        ctx.fillRect(0, 0, width, height);
+        for (const stone of stones) {
+          const driftX = Math.sin(t * stone.driftSpeed + stone.driftPhase) * stone.driftRadius;
+          const driftY = Math.cos(t * stone.driftSpeed * 0.7 + stone.driftAngle) * stone.driftRadius * 0.8;
+          stone.x = stone.baseX + driftX;
+          stone.y = stone.baseY + driftY;
+          const pulse = Math.sin(t * stone.speed + stone.phase) * 0.5 + 0.5;
+          const c = COLORS[stone.colorIdx];
+          let goldInfluence = 0;
+          if (mouseX >= 0) {
+            const dx = stone.x - mouseX;
+            const dy = stone.y - mouseY;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            goldInfluence = Math.max(0, 1 - dist / 180) * 0.25;
+          }
+          const r = Math.round(c.r + (GOLD.r - c.r) * goldInfluence);
+          const g = Math.round(c.g + (GOLD.g - c.g) * goldInfluence);
+          const b = Math.round(c.b + (GOLD.b - c.b) * goldInfluence);
+          const alpha = 0.15 + pulse * 0.12 + goldInfluence * 0.2;
+          ctx.beginPath();
+          ctx.arc(stone.x, stone.y, stone.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${alpha})`;
+          ctx.fill();
+        }
+        animFrame = requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', resize);
+      window.addEventListener('mousemove', (e) => { mouseX = e.clientX; mouseY = e.clientY; });
+      window.addEventListener('mouseleave', () => { mouseX = -1; mouseY = -1; });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      resize();
+      animFrame = requestAnimationFrame(draw);
+    </script>
+
+    <style>
+      /* Language Switcher */
+      .lang-switcher {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+      }
+      [dir="rtl"] .lang-switcher {
+        right: auto;
+        left: 1rem;
+      }
+      .lang-toggle {
+        display: flex;
+        align-items: center;
+        gap: 0.375rem;
+        padding: 0.375rem 0.75rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(201, 168, 76, 0.3);
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        color: #4A4840;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .lang-toggle:hover {
+        border-color: rgba(201, 168, 76, 0.6);
+        background: rgba(255, 255, 255, 0.95);
+      }
+      .lang-dropdown {
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        right: 0;
+        min-width: 160px;
+        max-height: 320px;
+        overflow-y: auto;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(201, 168, 76, 0.2);
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        padding: 0.25rem;
+      }
+      [dir="rtl"] .lang-dropdown {
+        right: auto;
+        left: 0;
+      }
+      .lang-option {
+        display: block;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8125rem;
+        color: #4A4840;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        transition: background 0.15s;
+      }
+      .lang-option:hover {
+        background: rgba(201, 168, 76, 0.1);
+      }
+      .lang-option.active {
+        background: rgba(201, 168, 76, 0.15);
+        font-weight: 600;
+        color: #A68A3A;
+      }
+    </style>
+  </body>
+</html>

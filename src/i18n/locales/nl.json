@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Dueydo: Privé en veilig chatten met vrienden",
+    "description": "End-to-end versleutelde berichten met Signal Protocol. Gemaakt voor vrienden die privacy, veiligheid en echte gesprekken waarderen. Binnenkort beschikbaar.",
+    "ogImageAlt": "Dueydo — Privé en veilig chatten met vrienden"
+  },
+  "hero": {
+    "tagline": "Privé en veilig chatten met vrienden 🍻"
+  },
+  "pillars": {
+    "srOnlyHeading": "Onze principes",
+    "fortified": { "title": "Versterkt", "description": "Signal Protocol-versleuteling. Jouw woorden zijn van jou alleen.", "descriptionShort": "Signal Protocol E2EE" },
+    "ephemeral": { "title": "Vluchtig", "description": "Berichten verdwijnen na twee weken. Geen archieven, geen sporen.", "descriptionShort": "Automatisch verwijderd na 14 dagen" },
+    "sovereign": { "title": "Soeverein", "description": "EU-infrastructuur. Zero-knowledge server. Jouw data blijft van jou.", "descriptionShort": "EU zero-knowledge infra" }
+  },
+  "features": {
+    "sectionTitle": "Meer dan een messenger",
+    "sectionSubtitle": "Veiligheid hoeft geen compromis te zijn. Rijke functies, nul concessies.",
+    "threads": { "title": "Threads", "description": "Reageer op elk bericht om een gericht zijgesprek te starten. De hoofdchat blijft overzichtelijk terwijl je diep in een onderwerp duikt." },
+    "posts": { "title": "Posts", "description": "Deel ideeën die het bewaren waard zijn. Uitgebreide posts met opmaak staan naast je chat — ze verdwijnen niet zoals berichten." },
+    "duressPin": { "title": "Duress PIN", "description": "Een tweede PIN die stilletjes nepgesprekken toont als je gedwongen wordt te ontgrendelen. Je echte berichten blijven verborgen. Herstel alles wanneer je veilig bent." },
+    "encryptedMedia": { "title": "Versleutelde media", "description": "Deel foto's, video's en documenten met dezelfde Signal-versleuteling als je berichten. Alles wordt automatisch verwijderd na twee weken." }
+  },
+  "screenshots": {
+    "sectionTitle": "Bekijk het in actie",
+    "sectionSubtitle": "Light mode of dark mode. Jouw gesprekken, op jouw manier.",
+    "chatCaption": "End-to-end versleutelde gesprekken",
+    "threadsCaption": "Gerichte zijgesprekken in threads",
+    "postsCaption": "Uitgebreide posts die bewaard blijven",
+    "postDetailCaption": "Rijke postdetails met reacties",
+    "chatLightAlt": "Dueydo chat in light mode", "chatDarkAlt": "Dueydo chat in dark mode",
+    "threadLightAlt": "Dueydo thread in light mode", "threadDarkAlt": "Dueydo thread in dark mode",
+    "postsLightAlt": "Dueydo posts in light mode", "postsDarkAlt": "Dueydo posts in dark mode",
+    "postDetailLightAlt": "Dueydo postdetail in light mode", "postDetailDarkAlt": "Dueydo postdetail in dark mode"
+  },
+  "closing": {
+    "quote": "\"Zelfs de monniken die het fijnste bier brouwden<br class=\"hidden md:inline\"/>hadden muren nodig om hun gesprekken veilig te houden.\"",
+    "comingSoon": "Binnenkort beschikbaar"
+  },
+  "footer": { "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>" },
+  "schema": {
+    "appDescription": "Privé en veilig chatten met vrienden. End-to-end versleutelde berichten met Signal Protocol, automatisch verdwijnende berichten, threads en posts.",
+    "orgDescription": "dizyx bouwt privacy-first software met EU-infrastructuur. Boutique AI-adviesbureau gespecialiseerd in agentic workflows en veilige communicatie.",
+    "websiteDescription": "End-to-end versleutelde berichten met Signal Protocol. Gemaakt voor vrienden die privacy, veiligheid en echte gesprekken waarderen."
+  },
+  "languageSwitcher": { "label": "Taal" }
+}

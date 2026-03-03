@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "Dueydo: Private Secure Chat for Friends",
+    "description": "End-to-end encrypted messaging with Signal Protocol. Built for friends who value privacy, security, and real conversation. Coming soon.",
+    "ogImageAlt": "Dueydo — Private secure chat for friends"
+  },
+
+  "hero": {
+    "tagline": "Private secure chat for friends 🍻"
+  },
+
+  "pillars": {
+    "srOnlyHeading": "Our Principles",
+    "fortified": {
+      "title": "Fortified",
+      "description": "Signal Protocol encryption. Your words are yours alone.",
+      "descriptionShort": "Signal Protocol E2EE"
+    },
+    "ephemeral": {
+      "title": "Ephemeral",
+      "description": "Messages vanish after two weeks. No archives, no traces.",
+      "descriptionShort": "Auto-deletes in 14 days"
+    },
+    "sovereign": {
+      "title": "Sovereign",
+      "description": "EU infrastructure. Zero-knowledge server. Your data stays yours.",
+      "descriptionShort": "EU zero-knowledge infra"
+    }
+  },
+
+  "features": {
+    "sectionTitle": "More Than a Messenger",
+    "sectionSubtitle": "Security shouldn't mean settling for less. Rich features, zero compromise.",
+    "threads": {
+      "title": "Threads",
+      "description": "Reply to any message to start a focused side conversation. The main chat stays clean while you dive deep into any topic."
+    },
+    "posts": {
+      "title": "Posts",
+      "description": "Share ideas worth keeping. Long-form posts with rich formatting live alongside your chat — they don't vanish like messages do."
+    },
+    "duressPin": {
+      "title": "Duress PIN",
+      "description": "A second PIN that silently shows fake conversations if you're ever forced to unlock. Your real messages stay hidden. Recover everything when you're safe."
+    },
+    "encryptedMedia": {
+      "title": "Encrypted Media",
+      "description": "Share photos, videos, and documents with the same Signal-level encryption as your messages. Everything auto-deletes after two weeks."
+    }
+  },
+
+  "screenshots": {
+    "sectionTitle": "See It In Action",
+    "sectionSubtitle": "Light mode or dark mode. Your conversations, your way.",
+    "chatCaption": "End-to-end encrypted conversations",
+    "threadsCaption": "Focused side conversations in threads",
+    "postsCaption": "Long-form posts that persist",
+    "postDetailCaption": "Rich post detail with comments",
+    "chatLightAlt": "Dueydo chat in light mode",
+    "chatDarkAlt": "Dueydo chat in dark mode",
+    "threadLightAlt": "Dueydo thread in light mode",
+    "threadDarkAlt": "Dueydo thread in dark mode",
+    "postsLightAlt": "Dueydo posts in light mode",
+    "postsDarkAlt": "Dueydo posts in dark mode",
+    "postDetailLightAlt": "Dueydo post detail in light mode",
+    "postDetailDarkAlt": "Dueydo post detail in dark mode"
+  },
+
+  "closing": {
+    "quote": "\"Even the monks who brewed the finest ales<br class=\"hidden md:inline\"/>needed walls to keep their conversations safe.\"",
+    "comingSoon": "Coming Soon"
+  },
+
+  "footer": {
+    "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>"
+  },
+
+  "schema": {
+    "appDescription": "Private secure chat for friends. End-to-end encrypted messaging with Signal Protocol, auto-deleting messages, threads, and posts.",
+    "orgDescription": "dizyx builds privacy-first software with EU infrastructure. Boutique AI consultancy specializing in agentic workflows and secure communications.",
+    "websiteDescription": "End-to-end encrypted messaging with Signal Protocol. Built for friends who value privacy, security, and real conversation."
+  },
+
+  "languageSwitcher": {
+    "label": "Language"
+  }
+}

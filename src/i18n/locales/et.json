@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Dueydo: Privaatne turvaline vestlus sõpradele",
+    "description": "Otsast otsani krüpteeritud sõnumid Signal Protocoli abil. Loodud sõpradele, kes hindavad privaatsust, turvalisust ja tõelist vestlust. Tulekul.",
+    "ogImageAlt": "Dueydo — Privaatne turvaline vestlus sõpradele"
+  },
+  "hero": { "tagline": "Privaatne turvaline vestlus sõpradele 🍻" },
+  "pillars": {
+    "srOnlyHeading": "Meie põhimõtted",
+    "fortified": { "title": "Kindlustatud", "description": "Signal Protocoli krüpteerimine. Teie sõnad kuuluvad ainult teile.", "descriptionShort": "Signal Protocol E2EE" },
+    "ephemeral": { "title": "Kaduv", "description": "Sõnumid kaovad kahe nädala pärast. Ei arhiive, ei jälgi.", "descriptionShort": "Automaatne kustutamine 14 päevaga" },
+    "sovereign": { "title": "Suveräänne", "description": "EL-i taristu. Nullteadmisega server. Teie andmed jäävad teie omaks.", "descriptionShort": "EL-i nullteadmise taristu" }
+  },
+  "features": {
+    "sectionTitle": "Rohkem kui sõnumirakendus",
+    "sectionSubtitle": "Turvalisus ei tähenda kompromisse. Rikkalikud funktsioonid, null järeleandmisi.",
+    "threads": { "title": "Lõimed", "description": "Vastake mis tahes sõnumile ja alustage fokusseeritud kõrvaljuttu. Põhivestlus jääb puhtaks, samal ajal kui sukeldute suvalisesse teemasse." },
+    "posts": { "title": "Postitused", "description": "Jagage ideid, mida tasub säilitada. Pikemad postitused rikkaliku vormindusega elavad teie vestluse kõrval — need ei kao nagu sõnumid." },
+    "duressPin": { "title": "Duress PIN", "description": "Teine PIN, mis vaikselt näitab võltsvestlusi, kui teid sunnitakse lukku avama. Teie tegelikud sõnumid jäävad peidetuks. Taastage kõik, kui olete kaitstud." },
+    "encryptedMedia": { "title": "Krüpteeritud meedia", "description": "Jagage fotosid, videoid ja dokumente sama Signal-taseme krüpteerimisega nagu teie sõnumid. Kõik kustutatakse automaatselt kahe nädala pärast." }
+  },
+  "screenshots": {
+    "sectionTitle": "Vaadake töös", "sectionSubtitle": "Hele või tume režiim. Teie vestlused, teie reeglid.",
+    "chatCaption": "Otsast otsani krüpteeritud vestlused", "threadsCaption": "Fokusseeritud kõrvaljutud lõimedes",
+    "postsCaption": "Pikemad postitused, mis jäävad alles", "postDetailCaption": "Postituse üksikasjalik vaade kommentaaridega",
+    "chatLightAlt": "Dueydo vestlus heledas režiimis", "chatDarkAlt": "Dueydo vestlus tumedas režiimis",
+    "threadLightAlt": "Dueydo lõim heledas režiimis", "threadDarkAlt": "Dueydo lõim tumedas režiimis",
+    "postsLightAlt": "Dueydo postitused heledas režiimis", "postsDarkAlt": "Dueydo postitused tumedas režiimis",
+    "postDetailLightAlt": "Dueydo postituse detailvaade heledas režiimis", "postDetailDarkAlt": "Dueydo postituse detailvaade tumedas režiimis"
+  },
+  "closing": { "quote": "\"Isegi mungad, kes pruulisid parimat õlut,<br class=\"hidden md:inline\"/>vajasid seinu, et oma jutte kaitsta.\"", "comingSoon": "Tulekul" },
+  "footer": { "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>" },
+  "schema": {
+    "appDescription": "Privaatne turvaline vestlus sõpradele. Otsast otsani krüpteeritud sõnumid Signal Protocoli abil, automaatselt kustuvad sõnumid, lõimed ja postitused.",
+    "orgDescription": "dizyx loob privaatsusele keskenduvat tarkvara EL-i taristuga. Boutique AI nõuandlus, mis on spetsialiseerunud agentsetele töövoogudele ja turvalisele suhtlusele.",
+    "websiteDescription": "Otsast otsani krüpteeritud sõnumid Signal Protocoli abil. Loodud sõpradele, kes hindavad privaatsust, turvalisust ja tõelist vestlust."
+  },
+  "languageSwitcher": { "label": "Keel" }
+}

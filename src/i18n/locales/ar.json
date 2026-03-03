@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Dueydo: دردشة خاصة وآمنة للأصدقاء",
+    "description": "رسائل مشفّرة بالكامل عبر Signal Protocol. صُمّمت للأصدقاء الذين يقدّرون الخصوصية والأمان والمحادثات الحقيقية. قريبًا.",
+    "ogImageAlt": "Dueydo — دردشة خاصة وآمنة للأصدقاء"
+  },
+  "hero": {
+    "tagline": "دردشة خاصة وآمنة للأصدقاء 🍻"
+  },
+  "pillars": {
+    "srOnlyHeading": "مبادئنا",
+    "fortified": {
+      "title": "محصّن",
+      "description": "تشفير Signal Protocol. كلماتك ملكك وحدك.",
+      "descriptionShort": "Signal Protocol E2EE"
+    },
+    "ephemeral": {
+      "title": "زائل",
+      "description": "الرسائل تختفي بعد أسبوعين. لا أرشيف، لا أثر.",
+      "descriptionShort": "حذف تلقائي خلال 14 يومًا"
+    },
+    "sovereign": {
+      "title": "سيادة كاملة",
+      "description": "بنية تحتية أوروبية. خوادم بدون أي معرفة ببياناتك. بياناتك تبقى لك.",
+      "descriptionShort": "بنية أوروبية بمعرفة صفرية"
+    }
+  },
+  "features": {
+    "sectionTitle": "أكثر من مجرد تطبيق مراسلة",
+    "sectionSubtitle": "الأمان لا يعني التنازل. ميزات غنية، بدون أي تنازل.",
+    "threads": {
+      "title": "Threads",
+      "description": "ردّ على أي رسالة لبدء محادثة جانبية مركّزة. تبقى الدردشة الرئيسية نظيفة بينما تتعمّق في أي موضوع."
+    },
+    "posts": {
+      "title": "Posts",
+      "description": "شارك أفكارًا تستحق البقاء. منشورات مطوّلة بتنسيق غني تعيش بجانب دردشتك — لا تختفي كما تفعل الرسائل."
+    },
+    "duressPin": {
+      "title": "Duress PIN",
+      "description": "رمز PIN ثانٍ يعرض محادثات وهمية بصمت إذا أُجبرت على فتح التطبيق. رسائلك الحقيقية تبقى مخفية. استعد كل شيء حين تكون بأمان."
+    },
+    "encryptedMedia": {
+      "title": "وسائط مشفّرة",
+      "description": "شارك الصور والفيديوهات والمستندات بنفس تشفير Signal المستخدم في رسائلك. كل شيء يُحذف تلقائيًا بعد أسبوعين."
+    }
+  },
+  "screenshots": {
+    "sectionTitle": "شاهده على أرض الواقع",
+    "sectionSubtitle": "الوضع الفاتح أو الوضع الداكن. محادثاتك، على طريقتك.",
+    "chatCaption": "محادثات مشفّرة بالكامل",
+    "threadsCaption": "محادثات جانبية مركّزة في Threads",
+    "postsCaption": "منشورات مطوّلة تبقى محفوظة",
+    "postDetailCaption": "تفاصيل المنشور مع التعليقات",
+    "chatLightAlt": "دردشة Dueydo في الوضع الفاتح",
+    "chatDarkAlt": "دردشة Dueydo في الوضع الداكن",
+    "threadLightAlt": "Thread في Dueydo بالوضع الفاتح",
+    "threadDarkAlt": "Thread في Dueydo بالوضع الداكن",
+    "postsLightAlt": "منشورات Dueydo في الوضع الفاتح",
+    "postsDarkAlt": "منشورات Dueydo في الوضع الداكن",
+    "postDetailLightAlt": "تفاصيل منشور Dueydo في الوضع الفاتح",
+    "postDetailDarkAlt": "تفاصيل منشور Dueydo في الوضع الداكن"
+  },
+  "closing": {
+    "quote": "\"حتى الرهبان الذين خمّروا أجود أنواع الجعة<br class=\"hidden md:inline\"/>احتاجوا جدرانًا لحماية أحاديثهم.\"",
+    "comingSoon": "قريبًا"
+  },
+  "footer": {
+    "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>"
+  },
+  "schema": {
+    "appDescription": "دردشة خاصة وآمنة للأصدقاء. رسائل مشفّرة بالكامل عبر Signal Protocol، رسائل تُحذف تلقائيًا، وThreads ومنشورات.",
+    "orgDescription": "dizyx تبني برمجيات تضع الخصوصية أولًا ببنية تحتية أوروبية. استشارات ذكاء اصطناعي متخصصة في سير العمل الوكيلي والاتصالات الآمنة.",
+    "websiteDescription": "رسائل مشفّرة بالكامل عبر Signal Protocol. صُمّمت للأصدقاء الذين يقدّرون الخصوصية والأمان والمحادثات الحقيقية."
+  },
+  "languageSwitcher": {
+    "label": "اللغة"
+  }
+}

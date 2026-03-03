@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Dueydo: Privater sicherer Chat für Freunde",
+    "description": "Ende-zu-Ende-verschlüsselte Nachrichten mit Signal Protocol. Für Freunde, die Privatsphäre, Sicherheit und echte Gespräche schätzen. Bald verfügbar.",
+    "ogImageAlt": "Dueydo — Privater sicherer Chat für Freunde"
+  },
+  "hero": {
+    "tagline": "Privater sicherer Chat für Freunde 🍻"
+  },
+  "pillars": {
+    "srOnlyHeading": "Unsere Prinzipien",
+    "fortified": {
+      "title": "Geschützt",
+      "description": "Signal Protocol Verschlüsselung. Deine Worte gehören nur dir.",
+      "descriptionShort": "Signal Protocol E2EE"
+    },
+    "ephemeral": {
+      "title": "Vergänglich",
+      "description": "Nachrichten verschwinden nach zwei Wochen. Keine Archive, keine Spuren.",
+      "descriptionShort": "Automatische Löschung nach 14 Tagen"
+    },
+    "sovereign": {
+      "title": "Souverän",
+      "description": "EU-Infrastruktur. Zero-Knowledge-Server. Deine Daten bleiben deine.",
+      "descriptionShort": "EU Zero-Knowledge-Infra"
+    }
+  },
+  "features": {
+    "sectionTitle": "Mehr als ein Messenger",
+    "sectionSubtitle": "Sicherheit heißt nicht Verzicht. Umfangreiche Funktionen, null Kompromisse.",
+    "threads": {
+      "title": "Threads",
+      "description": "Antworte auf jede Nachricht und starte eine fokussierte Nebenunterhaltung. Der Hauptchat bleibt übersichtlich, während du tief in jedes Thema eintauchst."
+    },
+    "posts": {
+      "title": "Posts",
+      "description": "Teile Ideen, die es wert sind, festgehalten zu werden. Ausführliche Posts mit Rich-Formatierung leben neben deinem Chat — sie verschwinden nicht wie Nachrichten."
+    },
+    "duressPin": {
+      "title": "Duress PIN",
+      "description": "Eine zweite PIN, die unauffällig gefälschte Unterhaltungen zeigt, falls du gezwungen wirst, dein Gerät zu entsperren. Deine echten Nachrichten bleiben verborgen. Stelle alles wieder her, sobald du in Sicherheit bist."
+    },
+    "encryptedMedia": {
+      "title": "Verschlüsselte Medien",
+      "description": "Teile Fotos, Videos und Dokumente mit derselben Signal-Verschlüsselung wie deine Nachrichten. Alles wird nach zwei Wochen automatisch gelöscht."
+    }
+  },
+  "screenshots": {
+    "sectionTitle": "Sieh es in Aktion",
+    "sectionSubtitle": "Light Mode oder Dark Mode. Deine Unterhaltungen, dein Stil.",
+    "chatCaption": "Ende-zu-Ende-verschlüsselte Unterhaltungen",
+    "threadsCaption": "Fokussierte Nebenunterhaltungen in Threads",
+    "postsCaption": "Ausführliche Posts, die bestehen bleiben",
+    "postDetailCaption": "Detailansicht mit Kommentaren",
+    "chatLightAlt": "Dueydo Chat im Light Mode",
+    "chatDarkAlt": "Dueydo Chat im Dark Mode",
+    "threadLightAlt": "Dueydo Thread im Light Mode",
+    "threadDarkAlt": "Dueydo Thread im Dark Mode",
+    "postsLightAlt": "Dueydo Posts im Light Mode",
+    "postsDarkAlt": "Dueydo Posts im Dark Mode",
+    "postDetailLightAlt": "Dueydo Post-Detail im Light Mode",
+    "postDetailDarkAlt": "Dueydo Post-Detail im Dark Mode"
+  },
+  "closing": {
+    "quote": "\"Selbst die Mönche, die das feinste Bier brauten,<br class=\"hidden md:inline\"/>brauchten Mauern, um ihre Gespräche zu schützen.\"",
+    "comingSoon": "Bald verfügbar"
+  },
+  "footer": {
+    "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>"
+  },
+  "schema": {
+    "appDescription": "Privater sicherer Chat für Freunde. Ende-zu-Ende-verschlüsselte Nachrichten mit Signal Protocol, automatisch löschende Nachrichten, Threads und Posts.",
+    "orgDescription": "dizyx entwickelt Privacy-First-Software mit EU-Infrastruktur. Boutique-KI-Beratung spezialisiert auf agentische Workflows und sichere Kommunikation.",
+    "websiteDescription": "Ende-zu-Ende-verschlüsselte Nachrichten mit Signal Protocol. Für Freunde, die Privatsphäre, Sicherheit und echte Gespräche schätzen."
+  },
+  "languageSwitcher": {
+    "label": "Sprache"
+  }
+}

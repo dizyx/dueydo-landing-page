@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Dueydo: Privāts un drošs čats draugiem",
+    "description": "Pilnībā šifrēta saziņa ar Signal Protocol. Veidots draugiem, kuri novērtē privātumu, drošību un patiesas sarunas. Drīzumā.",
+    "ogImageAlt": "Dueydo — Privāts drošs čats draugiem"
+  },
+  "hero": {
+    "tagline": "Privāts drošs čats draugiem 🍻"
+  },
+  "pillars": {
+    "srOnlyHeading": "Mūsu principi",
+    "fortified": {
+      "title": "Nostiprināts",
+      "description": "Signal Protocol šifrēšana. Tavi vārdi pieder tikai tev.",
+      "descriptionShort": "Signal Protocol E2EE"
+    },
+    "ephemeral": {
+      "title": "Īslaicīgs",
+      "description": "Ziņojumi pazūd pēc divām nedēļām. Bez arhīviem, bez pēdām.",
+      "descriptionShort": "Automātiska dzēšana 14 dienās"
+    },
+    "sovereign": {
+      "title": "Neatkarīgs",
+      "description": "ES infrastruktūra. Zero-knowledge serveris. Tavi dati paliek tavēji.",
+      "descriptionShort": "ES zero-knowledge infra"
+    }
+  },
+  "features": {
+    "sectionTitle": "Vairāk nekā ziņotne",
+    "sectionSubtitle": "Drošība nenozīmē kompromisus. Bagātīgas funkcijas, nulle kompromisu.",
+    "threads": {
+      "title": "Threads",
+      "description": "Atbildi uz jebkuru ziņojumu, lai sāktu fokusētu blakus sarunu. Galvenais čats paliek tīrs, kamēr tu iedziļinies jebkurā tēmā."
+    },
+    "posts": {
+      "title": "Posts",
+      "description": "Dalies ar idejām, ko vērts saglabāt. Gari ieraksti ar bagātīgu formatējumu atrodas blakus tavam čatam — tie nepazūd kā ziņojumi."
+    },
+    "duressPin": {
+      "title": "Duress PIN",
+      "description": "Otrais PIN kods, kas klusi parāda viltotas sarunas, ja tevi piespiež atbloķēt ierīci. Tavas īstās ziņas paliek paslēptas. Atgūsti visu, kad esi drošībā."
+    },
+    "encryptedMedia": {
+      "title": "Šifrēti mediji",
+      "description": "Dalies ar fotogrāfijām, video un dokumentiem ar tādu pašu Signal līmeņa šifrēšanu kā tavām ziņām. Viss tiek automātiski dzēsts pēc divām nedēļām."
+    }
+  },
+  "screenshots": {
+    "sectionTitle": "Skaties darbībā",
+    "sectionSubtitle": "Gaišais vai tumšais režīms. Tavas sarunas, tavs veids.",
+    "chatCaption": "Pilnībā šifrētas sarunas",
+    "threadsCaption": "Fokusētas blakus sarunas pavedienos",
+    "postsCaption": "Gari ieraksti, kas saglabājas",
+    "postDetailCaption": "Detalizēts ieraksts ar komentāriem",
+    "chatLightAlt": "Dueydo čats gaišajā režīmā",
+    "chatDarkAlt": "Dueydo čats tumšajā režīmā",
+    "threadLightAlt": "Dueydo pavediens gaišajā režīmā",
+    "threadDarkAlt": "Dueydo pavediens tumšajā režīmā",
+    "postsLightAlt": "Dueydo ieraksti gaišajā režīmā",
+    "postsDarkAlt": "Dueydo ieraksti tumšajā režīmā",
+    "postDetailLightAlt": "Dueydo ieraksta detaļas gaišajā režīmā",
+    "postDetailDarkAlt": "Dueydo ieraksta detaļas tumšajā režīmā"
+  },
+  "closing": {
+    "quote": "\"Pat mūki, kas brūvēja vislabāko alu,<br class=\"hidden md:inline\"/>vajadzēja sienas, lai pasargātu savas sarunas.\"",
+    "comingSoon": "Drīzumā"
+  },
+  "footer": {
+    "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>"
+  },
+  "schema": {
+    "appDescription": "Privāts drošs čats draugiem. Pilnībā šifrēta saziņa ar Signal Protocol, automātiski dzēšami ziņojumi, pavedieni un ieraksti.",
+    "orgDescription": "dizyx veido privātumam orientētu programmatūru ar ES infrastruktūru. Boutique AI konsultācijas, kas specializējas aģentisku darbplūsmu un drošas komunikācijas jomā.",
+    "websiteDescription": "Pilnībā šifrēta saziņa ar Signal Protocol. Veidots draugiem, kuri novērtē privātumu, drošību un patiesas sarunas."
+  },
+  "languageSwitcher": {
+    "label": "Valoda"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Dueydo: Privat es biztonsagos chat baratok kozott",
+    "description": "Vegpontok kozotti titkositott uzenetkuldes Signal Protocol-lal. Baratoknak keszult, akik ertekelni tudjak a maganszeletet, a biztonsagot es az oszinte beszelgetest. Hamarosan.",
+    "ogImageAlt": "Dueydo — Privat biztonsagos chat baratok kozott"
+  },
+  "hero": { "tagline": "Privat biztonsagos chat baratok kozott 🍻" },
+  "pillars": {
+    "srOnlyHeading": "Alapelveink",
+    "fortified": { "title": "Megerositett", "description": "Signal Protocol titkositas. A szavaid csak a tieid.", "descriptionShort": "Signal Protocol E2EE" },
+    "ephemeral": { "title": "Mulandó", "description": "Az uzenetek ket het utan eltuennek. Nincsenek archivumok, nincsenek nyomok.", "descriptionShort": "Automatikus torles 14 nap alatt" },
+    "sovereign": { "title": "Szuveren", "description": "EU infrastruktura. Nulla tudassal mukodo szerver. Az adataid a tieid maradnak.", "descriptionShort": "EU nulla tudasu infra" }
+  },
+  "features": {
+    "sectionTitle": "Tobb mint egy uzenetkuldo",
+    "sectionSubtitle": "A biztonsag nem jelent megalkuvast. Gazdag funkciok, nulla kompromisszum.",
+    "threads": { "title": "Szalak", "description": "Valaszolj barmely uzenetre, es inditsd el egy fokuszalt mellebeszelgetest. A fo chat rendben marad, mikozben barmely temaba melyen belemerulsz." },
+    "posts": { "title": "Bejegyzesek", "description": "Ossz meg gondolatokat, amiket erdemes megorizni. Hosszabb bejegyzesek gazdag formatazassal elnek a chat mellett — nem tuennek el, mint az uzenetek." },
+    "duressPin": { "title": "Duress PIN", "description": "Egy masodik PIN-kod, ami csendben hamis beszelgeteseket mutat, ha arra kenyszeritenek, hogy feloldd az alkalmazast. A valos uzeneteid rejtve maradnak. Mindent visszaallithatsz, ha biztonsagban vagy." },
+    "encryptedMedia": { "title": "Titkositott media", "description": "Ossz meg fotokat, videokat es dokumentumokat ugyanazzal a Signal szintu titkositassal, mint az uzeneteidet. Minden automatikusan torlodik ket het utan." }
+  },
+  "screenshots": {
+    "sectionTitle": "Nezd meg mukodes kozben", "sectionSubtitle": "Vilagos vagy sotet mod. A beszelgeteseid, a te modod szerint.",
+    "chatCaption": "Vegpontok kozotti titkositott beszelgetesek", "threadsCaption": "Fokuszalt mellebeszelgetesek szalakban",
+    "postsCaption": "Hosszu formátumu bejegyzesek, amik megmaradnak", "postDetailCaption": "Reszletes bejegyzes nezet hozzaszolasokkal",
+    "chatLightAlt": "Dueydo chat vilagos modban", "chatDarkAlt": "Dueydo chat sotet modban",
+    "threadLightAlt": "Dueydo szal vilagos modban", "threadDarkAlt": "Dueydo szal sotet modban",
+    "postsLightAlt": "Dueydo bejegyzesek vilagos modban", "postsDarkAlt": "Dueydo bejegyzesek sotet modban",
+    "postDetailLightAlt": "Dueydo bejegyzes reszletek vilagos modban", "postDetailDarkAlt": "Dueydo bejegyzes reszletek sotet modban"
+  },
+  "closing": { "quote": "\"Meg a legfinomabb sort fozo szerzeteseknek is<br class=\"hidden md:inline\"/>falakra volt szukseguk, hogy beszelgeteseiket megvédjek.\"", "comingSoon": "Hamarosan" },
+  "footer": { "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>" },
+  "schema": {
+    "appDescription": "Privat biztonsagos chat baratok kozott. Vegpontok kozotti titkositott uzenetkuldes Signal Protocol-lal, automatikusan torodo uzenetek, szalak es bejegyzesek.",
+    "orgDescription": "A dizyx adatvedelmet elotere helyezo szoftvert fejleszt EU infrastrukturan. Boutique AI tanacsado ceg, agentikus munkafolyamatokra es biztonsagos kommunikaciora specializalodva.",
+    "websiteDescription": "Vegpontok kozotti titkositott uzenetkuldes Signal Protocol-lal. Baratoknak keszult, akik ertekelni tudjak a maganszeletet, a biztonsagot es az oszinte beszelgetest."
+  },
+  "languageSwitcher": { "label": "Nyelv" }
+}

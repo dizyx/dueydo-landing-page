@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Dueydo: Yksityinen ja turvallinen keskustelu ysteville",
+    "description": "Paasta paahan salattu viestinta Signal-protokollalla. Rakennettu ysteville, jotka arvostavat yksityisyytta, turvallisuutta ja aitoa keskustelua. Tulossa pian.",
+    "ogImageAlt": "Dueydo — Yksityinen turvallinen keskustelu ysteville"
+  },
+  "hero": { "tagline": "Yksityinen turvallinen keskustelu ysteville 🍻" },
+  "pillars": {
+    "srOnlyHeading": "Periaatteemme",
+    "fortified": { "title": "Linnoitettu", "description": "Signal-protokollan salaus. Sanasi ovat vain sinun.", "descriptionShort": "Signal Protocol E2EE" },
+    "ephemeral": { "title": "Katoava", "description": "Viestit katoavat kahden viikon kuluttua. Ei arkistoja, ei jalkia.", "descriptionShort": "Automaattinen poisto 14 paivassa" },
+    "sovereign": { "title": "Omavaltainen", "description": "EU-infrastruktuuri. Nollatietamyspalvelin. Tietosi pysyvat sinun.", "descriptionShort": "EU:n nollatietamysinfra" }
+  },
+  "features": {
+    "sectionTitle": "Enemman kuin viestisovellus",
+    "sectionSubtitle": "Turvallisuuden ei tarvitse tarkoittaa kompromisseja. Monipuoliset ominaisuudet, nolla kompromissia.",
+    "threads": { "title": "Ketjut", "description": "Vastaa mihin tahansa viestiin ja aloita kohdennettu sivukeskustelu. Paakanava pysyy siistina, kun sukellat syville mihin tahansa aiheeseen." },
+    "posts": { "title": "Julkaisut", "description": "Jaa ideoita, jotka ansaitsevat sailya. Pitkien julkaisujen muotoiltu sisalto elaa keskustelun rinnalla — ne eivat katoa kuten viestit." },
+    "duressPin": { "title": "Duress PIN", "description": "Toinen PIN-koodi, joka nayttaa hiljaisesti valekeskusteluja, jos sinut pakotetaan avaamaan sovellus. Oikeat viestisi pysyvat piilossa. Palauta kaikki, kun olet turvassa." },
+    "encryptedMedia": { "title": "Salattu media", "description": "Jaa kuvia, videoita ja dokumentteja samalla Signal-tason salauksella kuin viestisi. Kaikki poistetaan automaattisesti kahden viikon kuluttua." }
+  },
+  "screenshots": {
+    "sectionTitle": "Katso toiminnassa", "sectionSubtitle": "Vaalea tai tumma teema. Keskustelusi, sinun tapasi.",
+    "chatCaption": "Paasta paahan salatut keskustelut", "threadsCaption": "Kohdennetut sivukeskustelut ketjuissa",
+    "postsCaption": "Pitkaan sailyvat julkaisut", "postDetailCaption": "Monipuolinen julkaisunakymia kommentteineen",
+    "chatLightAlt": "Dueydo-keskustelu vaaleassa tilassa", "chatDarkAlt": "Dueydo-keskustelu tummassa tilassa",
+    "threadLightAlt": "Dueydo-ketju vaaleassa tilassa", "threadDarkAlt": "Dueydo-ketju tummassa tilassa",
+    "postsLightAlt": "Dueydo-julkaisut vaaleassa tilassa", "postsDarkAlt": "Dueydo-julkaisut tummassa tilassa",
+    "postDetailLightAlt": "Dueydo-julkaisun tiedot vaaleassa tilassa", "postDetailDarkAlt": "Dueydo-julkaisun tiedot tummassa tilassa"
+  },
+  "closing": { "quote": "\"Parhaita oluita panemaan oppineet munkitkin<br class=\"hidden md:inline\"/>tarvitsivat seinat keskustelujensa suojaksi.\"", "comingSoon": "Tulossa pian" },
+  "footer": { "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>" },
+  "schema": {
+    "appDescription": "Yksityinen turvallinen keskustelu ysteville. Paasta paahan salattu viestinta Signal-protokollalla, automaattisesti katoavat viestit, ketjut ja julkaisut.",
+    "orgDescription": "dizyx rakentaa yksityisyys edella -ohjelmistoja EU-infrastruktuurilla. Boutique-tekoalykonsultointi, joka erikoistuu agenttityonkulkuihin ja turvalliseen viestintaan.",
+    "websiteDescription": "Paasta paahan salattu viestinta Signal-protokollalla. Rakennettu ysteville, jotka arvostavat yksityisyytta, turvallisuutta ja aitoa keskustelua."
+  },
+  "languageSwitcher": { "label": "Kieli" }
+}

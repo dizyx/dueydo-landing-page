@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Dueydo: 친구를 위한 프라이빗 보안 채팅",
+    "description": "Signal Protocol 기반 종단 간 암호화 메시징. 프라이버시, 보안, 진짜 대화를 소중히 여기는 친구들을 위해. 곧 출시.",
+    "ogImageAlt": "Dueydo — 친구를 위한 프라이빗 보안 채팅"
+  },
+  "hero": {
+    "tagline": "친구를 위한 프라이빗 보안 채팅 🍻"
+  },
+  "pillars": {
+    "srOnlyHeading": "우리의 원칙",
+    "fortified": {
+      "title": "철벽 보안",
+      "description": "Signal Protocol 암호화. 당신의 말은 오직 당신만의 것.",
+      "descriptionShort": "Signal Protocol E2EE"
+    },
+    "ephemeral": {
+      "title": "사라지는 대화",
+      "description": "메시지는 2주 후 소멸. 아카이브도, 흔적도 없습니다.",
+      "descriptionShort": "14일 후 자동 삭제"
+    },
+    "sovereign": {
+      "title": "자주적",
+      "description": "EU 인프라. 제로 지식 서버. 당신의 데이터는 당신의 것.",
+      "descriptionShort": "EU zero-knowledge 인프라"
+    }
+  },
+  "features": {
+    "sectionTitle": "메신저 그 이상",
+    "sectionSubtitle": "보안을 위해 타협할 필요 없습니다. 풍부한 기능, 제로 타협.",
+    "threads": {
+      "title": "Threads",
+      "description": "아무 메시지에나 답장하여 집중된 사이드 대화를 시작하세요. 메인 채팅은 깔끔하게 유지하면서 어떤 주제든 깊이 파고들 수 있습니다."
+    },
+    "posts": {
+      "title": "Posts",
+      "description": "간직할 가치가 있는 아이디어를 공유하세요. 서식이 풍부한 장문 게시물이 채팅과 함께 존재합니다 — 메시지처럼 사라지지 않습니다."
+    },
+    "duressPin": {
+      "title": "Duress PIN",
+      "description": "강제로 잠금 해제당할 때 가짜 대화를 조용히 보여주는 두 번째 PIN. 진짜 메시지는 숨겨진 채로 유지됩니다. 안전해지면 모든 것을 복구하세요."
+    },
+    "encryptedMedia": {
+      "title": "암호화 미디어",
+      "description": "사진, 동영상, 문서를 메시지와 동일한 Signal 수준의 암호화로 공유하세요. 모든 것이 2주 후 자동 삭제됩니다."
+    }
+  },
+  "screenshots": {
+    "sectionTitle": "직접 확인하세요",
+    "sectionSubtitle": "라이트 모드 또는 다크 모드. 당신의 대화, 당신의 방식.",
+    "chatCaption": "종단 간 암호화된 대화",
+    "threadsCaption": "스레드에서의 집중 사이드 대화",
+    "postsCaption": "사라지지 않는 장문 게시물",
+    "postDetailCaption": "댓글이 있는 상세 게시물",
+    "chatLightAlt": "Dueydo 채팅 라이트 모드",
+    "chatDarkAlt": "Dueydo 채팅 다크 모드",
+    "threadLightAlt": "Dueydo 스레드 라이트 모드",
+    "threadDarkAlt": "Dueydo 스레드 다크 모드",
+    "postsLightAlt": "Dueydo 게시물 라이트 모드",
+    "postsDarkAlt": "Dueydo 게시물 다크 모드",
+    "postDetailLightAlt": "Dueydo 게시물 상세 라이트 모드",
+    "postDetailDarkAlt": "Dueydo 게시물 상세 다크 모드"
+  },
+  "closing": {
+    "quote": "\"최고의 에일을 양조한 수도사들도<br class=\"hidden md:inline\"/>대화를 지키기 위한 벽이 필요했습니다.\"",
+    "comingSoon": "곧 출시"
+  },
+  "footer": {
+    "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>"
+  },
+  "schema": {
+    "appDescription": "친구를 위한 프라이빗 보안 채팅. Signal Protocol 기반 종단 간 암호화 메시징, 자동 삭제 메시지, 스레드, 게시물.",
+    "orgDescription": "dizyx는 EU 인프라 기반의 프라이버시 우선 소프트웨어를 개발합니다. 에이전트 워크플로우와 보안 커뮤니케이션 전문 부티크 AI 컨설턴시.",
+    "websiteDescription": "Signal Protocol 기반 종단 간 암호화 메시징. 프라이버시, 보안, 진짜 대화를 소중히 여기는 친구들을 위해."
+  },
+  "languageSwitcher": {
+    "label": "언어"
+  }
+}

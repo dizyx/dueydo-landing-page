@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Dueydo: Súkromný bezpečný chat pre priateľov",
+    "description": "Správy so šifrovaním end-to-end cez Signal Protocol. Vytvorené pre priateľov, ktorým záleží na súkromí, bezpečnosti a skutočnom rozhovore. Už čoskoro.",
+    "ogImageAlt": "Dueydo — Súkromný bezpečný chat pre priateľov"
+  },
+  "hero": { "tagline": "Súkromný bezpečný chat pre priateľov 🍻" },
+  "pillars": {
+    "srOnlyHeading": "Naše zásady",
+    "fortified": { "title": "Opevnený", "description": "Šifrovanie cez Signal Protocol. Vaše slová patria len vám.", "descriptionShort": "Signal Protocol E2EE" },
+    "ephemeral": { "title": "Pominuteľný", "description": "Správy zmiznú po dvoch týždňoch. Žiadne archívy, žiadne stopy.", "descriptionShort": "Automatické zmazanie za 14 dní" },
+    "sovereign": { "title": "Suverénny", "description": "Infraštruktúra v EÚ. Server s nulovým prístupom k údajom. Vaše dáta zostávajú vaše.", "descriptionShort": "EÚ infraštruktúra s nulovým prístupom" }
+  },
+  "features": {
+    "sectionTitle": "Viac než messenger",
+    "sectionSubtitle": "Bezpečnosť neznamená kompromisy. Bohaté funkcie, nulové ústupky.",
+    "threads": { "title": "Vlákna", "description": "Odpovedzte na ľubovoľnú správu a začnite cielený vedľajší rozhovor. Hlavný chat zostáva prehľadný, kým sa ponoríte hlbšie do akejkoľvek témy." },
+    "posts": { "title": "Príspevky", "description": "Zdieľajte nápady, ktoré stoja za uchovanie. Dlhšie príspevky s bohatým formátovaním žijú vedľa vášho chatu — nezmiznú ako správy." },
+    "duressPin": { "title": "Duress PIN", "description": "Druhý PIN, ktorý potichu zobrazí falošné konverzácie, ak vás niekto núti odomknúť. Vaše skutočné správy zostanú skryté. Obnovte všetko, keď ste v bezpečí." },
+    "encryptedMedia": { "title": "Šifrované médiá", "description": "Zdieľajte fotografie, videá a dokumenty s rovnakým šifrovaním na úrovni Signal ako vaše správy. Všetko sa automaticky zmaže po dvoch týždňoch." }
+  },
+  "screenshots": {
+    "sectionTitle": "Pozrite sa naživo", "sectionSubtitle": "Svetlý alebo tmavý režim. Vaše konverzácie, vaše pravidlá.",
+    "chatCaption": "Konverzácie so šifrovaním end-to-end", "threadsCaption": "Cielené vedľajšie rozhovory vo vláknach",
+    "postsCaption": "Dlhšie príspevky, ktoré zostávajú", "postDetailCaption": "Detail príspevku s komentármi",
+    "chatLightAlt": "Dueydo chat vo svetlom režime", "chatDarkAlt": "Dueydo chat v tmavom režime",
+    "threadLightAlt": "Dueydo vlákno vo svetlom režime", "threadDarkAlt": "Dueydo vlákno v tmavom režime",
+    "postsLightAlt": "Dueydo príspevky vo svetlom režime", "postsDarkAlt": "Dueydo príspevky v tmavom režime",
+    "postDetailLightAlt": "Dueydo detail príspevku vo svetlom režime", "postDetailDarkAlt": "Dueydo detail príspevku v tmavom režime"
+  },
+  "closing": { "quote": "\"Aj mnísi, čo varili tie najlepšie pivá,<br class=\"hidden md:inline\"/>potrebovali múry, aby ochránili svoje rozhovory.\"", "comingSoon": "Už čoskoro" },
+  "footer": { "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>" },
+  "schema": {
+    "appDescription": "Súkromný bezpečný chat pre priateľov. Správy so šifrovaním end-to-end cez Signal Protocol, automaticky sa mazajúce správy, vlákna a príspevky.",
+    "orgDescription": "dizyx vytvára softvér so zameraním na súkromie a infraštruktúrou v EÚ. Boutique AI konzultačná firma špecializujúca sa na agentné pracovné postupy a bezpečnú komunikáciu.",
+    "websiteDescription": "Správy so šifrovaním end-to-end cez Signal Protocol. Vytvorené pre priateľov, ktorým záleží na súkromí, bezpečnosti a skutočnom rozhovore."
+  },
+  "languageSwitcher": { "label": "Jazyk" }
+}

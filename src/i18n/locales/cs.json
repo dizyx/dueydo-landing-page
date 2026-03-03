@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Dueydo: Soukromy a bezpecny chat pro pratele",
+    "description": "Koncove sifrovane zpravy pomoci Signal Protocol. Vytvoreno pro pratele, kteri si ceni soukromi, bezpecnosti a opravdove konverzace. Juz brzy.",
+    "ogImageAlt": "Dueydo — Soukromy bezpecny chat pro pratele"
+  },
+  "hero": { "tagline": "Soukromy bezpecny chat pro pratele 🍻" },
+  "pillars": {
+    "srOnlyHeading": "Nase zasady",
+    "fortified": { "title": "Opevneny", "description": "Sifrovani Signal Protocol. Vase slova patri jen vam.", "descriptionShort": "Signal Protocol E2EE" },
+    "ephemeral": { "title": "Pomijive", "description": "Zpravy zmizi po dvou tydnech. Zadne archivy, zadne stopy.", "descriptionShort": "Automaticke smazani za 14 dni" },
+    "sovereign": { "title": "Svrchovanost", "description": "EU infrastruktura. Server s nulovymi znalostmi. Vase data zustanou vase.", "descriptionShort": "EU infrastruktura s nulovymi znalostmi" }
+  },
+  "features": {
+    "sectionTitle": "Vic nez jen messenger",
+    "sectionSubtitle": "Bezpecnost neznamena delat kompromisy. Bohate funkce, zadne ustupky.",
+    "threads": { "title": "Vlakna", "description": "Odpovedejte na jakoukoli zpravu a zahajte cileny vedlejsi rozhovor. Hlavni chat zustane prehledny, zatimco se ponorite do libovolneho tematu." },
+    "posts": { "title": "Prispevky", "description": "Sdilejte napady, ktere stoji za uchovaní. Delsi prispevky s bohatym formatovanim ziji vedle vaseho chatu — nezmizi jako zpravy." },
+    "duressPin": { "title": "Duress PIN", "description": "Druhy PIN, ktery tise zobrazi falesne konverzace, pokud budete nuceni odemknout aplikaci. Vase skutecne zpravy zustanou skryte. Vse obnovite, az budete v bezpeci." },
+    "encryptedMedia": { "title": "Sifrovana media", "description": "Sdilejte fotky, videa a dokumenty se stejnym sifrovanim urovne Signal jako vase zpravy. Vse se automaticky smaze po dvou tydnech." }
+  },
+  "screenshots": {
+    "sectionTitle": "Podivejte se, jak to funguje", "sectionSubtitle": "Svetly nebo tmavy rezim. Vase konverzace, vase volba.",
+    "chatCaption": "Koncove sifrovane konverzace", "threadsCaption": "Cilene vedlejsi konverzace ve vlaknech",
+    "postsCaption": "Delsi prispevky, ktere pretrvaji", "postDetailCaption": "Bohaty detail prispevku s komentari",
+    "chatLightAlt": "Dueydo chat ve svetlem rezimu", "chatDarkAlt": "Dueydo chat v tmavem rezimu",
+    "threadLightAlt": "Dueydo vlakno ve svetlem rezimu", "threadDarkAlt": "Dueydo vlakno v tmavem rezimu",
+    "postsLightAlt": "Dueydo prispevky ve svetlem rezimu", "postsDarkAlt": "Dueydo prispevky v tmavem rezimu",
+    "postDetailLightAlt": "Detail prispevku Dueydo ve svetlem rezimu", "postDetailDarkAlt": "Detail prispevku Dueydo v tmavem rezimu"
+  },
+  "closing": { "quote": "\"I mnisi, kteri varili ty nejlepsi lezaky,<br class=\"hidden md:inline\"/>potrebovali zdi, aby sve rozhovory uchranili.\"", "comingSoon": "Juz brzy" },
+  "footer": { "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>" },
+  "schema": {
+    "appDescription": "Soukromy bezpecny chat pro pratele. Koncove sifrovane zpravy pomoci Signal Protocol, automaticky mizici zpravy, vlakna a prispevky.",
+    "orgDescription": "dizyx vytvari software s durazem na soukromi na EU infrastrukture. Boutique AI konzultace se specializaci na agentni workflow a bezpecnou komunikaci.",
+    "websiteDescription": "Koncove sifrovane zpravy pomoci Signal Protocol. Vytvoreno pro pratele, kteri si ceni soukromi, bezpecnosti a opravdove konverzace."
+  },
+  "languageSwitcher": { "label": "Jazyk" }
+}

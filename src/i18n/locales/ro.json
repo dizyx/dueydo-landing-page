@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Dueydo: Chat privat si securizat pentru prieteni",
+    "description": "Mesagerie criptata cap-la-cap cu Signal Protocol. Creata pentru prieteni care pun pret pe confidentialitate, securitate si conversatii autentice. In curand.",
+    "ogImageAlt": "Dueydo — Chat privat securizat pentru prieteni"
+  },
+  "hero": { "tagline": "Chat privat securizat pentru prieteni 🍻" },
+  "pillars": {
+    "srOnlyHeading": "Principiile noastre",
+    "fortified": { "title": "Fortificat", "description": "Criptare Signal Protocol. Cuvintele tale iti apartin doar tie.", "descriptionShort": "Signal Protocol E2EE" },
+    "ephemeral": { "title": "Efemer", "description": "Mesajele dispar dupa doua saptamani. Fara arhive, fara urme.", "descriptionShort": "Stergere automata in 14 zile" },
+    "sovereign": { "title": "Suveran", "description": "Infrastructura UE. Server cu zero cunostinte. Datele tale raman ale tale.", "descriptionShort": "Infrastructura UE cu zero cunostinte" }
+  },
+  "features": {
+    "sectionTitle": "Mai mult decat un messenger",
+    "sectionSubtitle": "Securitatea nu inseamna compromisuri. Functionalitati complete, zero compromisuri.",
+    "threads": { "title": "Fire de discutie", "description": "Raspunde la orice mesaj si porneste o conversatie laterala focalizata. Chatul principal ramane curat in timp ce aprofundezi orice subiect." },
+    "posts": { "title": "Postari", "description": "Imparte idei care merita pastrate. Postarile lungi cu formatare complexa traiesc alaturi de chat — nu dispar ca mesajele." },
+    "duressPin": { "title": "Duress PIN", "description": "Un al doilea PIN care afiseaza discret conversatii false daca esti fortat sa deblochezi aplicatia. Mesajele tale reale raman ascunse. Recuperezi totul cand esti in siguranta." },
+    "encryptedMedia": { "title": "Media criptata", "description": "Trimite fotografii, videoclipuri si documente cu aceeasi criptare de nivel Signal ca mesajele tale. Totul se sterge automat dupa doua saptamani." }
+  },
+  "screenshots": {
+    "sectionTitle": "Vezi cum functioneaza", "sectionSubtitle": "Mod luminos sau mod intunecat. Conversatiile tale, asa cum vrei tu.",
+    "chatCaption": "Conversatii criptate cap-la-cap", "threadsCaption": "Conversatii laterale focalizate in fire",
+    "postsCaption": "Postari lungi care persista", "postDetailCaption": "Detaliu postare cu comentarii",
+    "chatLightAlt": "Dueydo chat in mod luminos", "chatDarkAlt": "Dueydo chat in mod intunecat",
+    "threadLightAlt": "Fir Dueydo in mod luminos", "threadDarkAlt": "Fir Dueydo in mod intunecat",
+    "postsLightAlt": "Postari Dueydo in mod luminos", "postsDarkAlt": "Postari Dueydo in mod intunecat",
+    "postDetailLightAlt": "Detaliu postare Dueydo in mod luminos", "postDetailDarkAlt": "Detaliu postare Dueydo in mod intunecat"
+  },
+  "closing": { "quote": "\"Chiar si calugarii care preparau cele mai bune beri<br class=\"hidden md:inline\"/>aveau nevoie de ziduri ca sa-si protejeze conversatiile.\"", "comingSoon": "In curand" },
+  "footer": { "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>" },
+  "schema": {
+    "appDescription": "Chat privat securizat pentru prieteni. Mesagerie criptata cap-la-cap cu Signal Protocol, mesaje cu stergere automata, fire de discutie si postari.",
+    "orgDescription": "dizyx construieste software cu prioritate pe confidentialitate, pe infrastructura UE. Consultanta AI boutique specializata in fluxuri de lucru agentice si comunicatii securizate.",
+    "websiteDescription": "Mesagerie criptata cap-la-cap cu Signal Protocol. Creata pentru prieteni care pun pret pe confidentialitate, securitate si conversatii autentice."
+  },
+  "languageSwitcher": { "label": "Limba" }
+}

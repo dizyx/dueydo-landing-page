@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "title": "Dueydo : Messagerie privée et sécurisée entre amis",
+    "description": "Messagerie chiffrée de bout en bout avec Signal Protocol. Conçue pour les amis qui tiennent à leur vie privée, à la sécurité et aux vraies conversations. Bientôt disponible.",
+    "ogImageAlt": "Dueydo — Messagerie privée et sécurisée entre amis"
+  },
+  "hero": {
+    "tagline": "Messagerie privée et sécurisée entre amis 🍻"
+  },
+  "pillars": {
+    "srOnlyHeading": "Nos principes",
+    "fortified": {
+      "title": "Fortifié",
+      "description": "Chiffrement Signal Protocol. Vos mots n'appartiennent qu'à vous.",
+      "descriptionShort": "Signal Protocol E2EE"
+    },
+    "ephemeral": {
+      "title": "Éphémère",
+      "description": "Les messages disparaissent au bout de deux semaines. Pas d'archives, pas de traces.",
+      "descriptionShort": "Suppression auto en 14 jours"
+    },
+    "sovereign": {
+      "title": "Souverain",
+      "description": "Infrastructure UE. Serveur zero-knowledge. Vos données restent les vôtres.",
+      "descriptionShort": "Infra zero-knowledge UE"
+    }
+  },
+  "features": {
+    "sectionTitle": "Bien plus qu'une messagerie",
+    "sectionSubtitle": "La sécurité ne devrait pas être un compromis. Des fonctionnalités riches, zéro concession.",
+    "threads": {
+      "title": "Fils de discussion",
+      "description": "Répondez à n'importe quel message pour lancer une conversation parallèle ciblée. Le chat principal reste clair pendant que vous approfondissez un sujet."
+    },
+    "posts": {
+      "title": "Posts",
+      "description": "Partagez des idées qui méritent d'être conservées. Des publications longues avec mise en forme enrichie coexistent avec votre chat — elles ne disparaissent pas comme les messages."
+    },
+    "duressPin": {
+      "title": "Duress PIN",
+      "description": "Un second PIN qui affiche discrètement de fausses conversations si on vous force à déverrouiller. Vos vrais messages restent cachés. Récupérez tout une fois en sécurité."
+    },
+    "encryptedMedia": {
+      "title": "Médias chiffrés",
+      "description": "Partagez photos, vidéos et documents avec le même chiffrement Signal que vos messages. Tout est supprimé automatiquement au bout de deux semaines."
+    }
+  },
+  "screenshots": {
+    "sectionTitle": "Voyez par vous-même",
+    "sectionSubtitle": "Mode clair ou mode sombre. Vos conversations, à votre façon.",
+    "chatCaption": "Conversations chiffrées de bout en bout",
+    "threadsCaption": "Conversations ciblées en fils de discussion",
+    "postsCaption": "Publications longues qui persistent",
+    "postDetailCaption": "Détail d'une publication avec commentaires",
+    "chatLightAlt": "Chat Dueydo en mode clair",
+    "chatDarkAlt": "Chat Dueydo en mode sombre",
+    "threadLightAlt": "Fil Dueydo en mode clair",
+    "threadDarkAlt": "Fil Dueydo en mode sombre",
+    "postsLightAlt": "Posts Dueydo en mode clair",
+    "postsDarkAlt": "Posts Dueydo en mode sombre",
+    "postDetailLightAlt": "Détail de post Dueydo en mode clair",
+    "postDetailDarkAlt": "Détail de post Dueydo en mode sombre"
+  },
+  "closing": {
+    "quote": "\"Même les moines qui brassaient les meilleures bières<br class=\"hidden md:inline\"/>avaient besoin de murs pour protéger leurs conversations.\"",
+    "comingSoon": "Bientôt disponible"
+  },
+  "footer": {
+    "copyright": "© 2026 <a href=\"https://dizyx.com\" class=\"hover:text-gold transition-colors\">dizyx</a>"
+  },
+  "schema": {
+    "appDescription": "Messagerie privée et sécurisée entre amis. Chiffrement de bout en bout avec Signal Protocol, suppression automatique des messages, fils de discussion et publications.",
+    "orgDescription": "dizyx conçoit des logiciels axés sur la vie privée avec une infrastructure UE. Cabinet de conseil IA boutique spécialisé dans les workflows agentiques et les communications sécurisées.",
+    "websiteDescription": "Messagerie chiffrée de bout en bout avec Signal Protocol. Conçue pour les amis qui tiennent à leur vie privée, à la sécurité et aux vraies conversations."
+  },
+  "languageSwitcher": {
+    "label": "Langue"
+  }
+}
