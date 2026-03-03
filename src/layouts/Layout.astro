@@ -6,13 +6,66 @@ interface Props {
   title?: string;
   description?: string;
   ogUrl?: string;
+  ogImage?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
+
+const SITE_URL = 'https://dueydo.com';
 
 const {
   title = 'Dueydo: Private Secure Chat for Friends',
   description = 'End-to-end encrypted messaging with Signal Protocol. Built for friends who value privacy, security, and real conversation. Coming soon.',
-  ogUrl = 'https://dueydo.com'
+  ogUrl = SITE_URL,
+  ogImage = `${SITE_URL}/og-image.png`,
+  jsonLd,
 } = Astro.props;
+
+// Canonical URL from current page path
+const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href;
+
+// Default structured data for the site (SoftwareApplication + Organization)
+const defaultJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Dueydo',
+    applicationCategory: 'CommunicationApplication',
+    operatingSystem: 'iOS, Android',
+    description: 'Private secure chat for friends. End-to-end encrypted messaging with Signal Protocol, auto-deleting messages, threads, and posts.',
+    url: SITE_URL,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    featureList: [
+      'Signal Protocol end-to-end encryption',
+      'Auto-deleting messages (14 days)',
+      'Threaded conversations',
+      'Long-form posts',
+      'Duress PIN for plausible deniability',
+      'Encrypted media sharing',
+      'EU-based zero-knowledge infrastructure',
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'dizyx',
+    url: 'https://dizyx.com',
+    logo: `${SITE_URL}/favicon.svg`,
+    sameAs: [],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Dueydo',
+    url: SITE_URL,
+    description: description,
+  },
+];
+
+const structuredData = jsonLd ?? defaultJsonLd;
 ---
 
 <!doctype html>
@@ -22,7 +75,16 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="description" content={description} />
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Favicons & Touch Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#C9A84C" />
 
     <!-- Fonts: self-hosted, no external CDN dependencies -->
 
@@ -32,11 +94,27 @@ const {
     <meta property="og:type" content="website" />
     <meta property="og:url" content={ogUrl} />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Dueydo — Private secure chat for friends" />
+    <meta property="og:site_name" content="Dueydo" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="Dueydo — Private secure chat for friends" />
+
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    {Array.isArray(structuredData) ? (
+      structuredData.map((item) => (
+        <script type="application/ld+json" set:html={JSON.stringify(item)} />
+      ))
+    ) : (
+      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    )}
 
     <title>{title}</title>
   </head>

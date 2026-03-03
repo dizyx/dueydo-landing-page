@@ -14,8 +14,8 @@ import Footer from '../components/Footer.astro';
     <!-- Hero Section — full viewport -->
     <section class="h-dvh flex flex-col items-center justify-center px-5 md:px-6">
 
-      <!-- Logo & Name -->
-      <div class="text-center mb-6 md:mb-10 reveal">
+      <!-- Logo & Name (no .reveal — must be visible for LCP) -->
+      <div class="text-center mb-6 md:mb-10">
         <!-- Shield + D logo -->
         <ShieldLogo class="mx-auto mb-3 md:mb-6 w-12 h-14 md:w-20 md:h-[5.5rem]" />
 
@@ -29,6 +29,7 @@ import Footer from '../components/Footer.astro';
       </div>
 
       <!-- Three Pillars — philosophy row -->
+      <h2 class="sr-only">Our Principles</h2>
       <div class="flex flex-row md:grid md:grid-cols-3 gap-3 md:gap-6 max-w-3xl w-full mb-6 md:mb-10 reveal" style="transition-delay: 0.15s;">
         <div class="flex-1 text-center px-3 py-4 md:p-6 rounded-lg bg-bg-card/60 backdrop-blur-sm border border-border-subtle">
           <!-- Shield icon -->
@@ -188,10 +189,10 @@ import Footer from '../components/Footer.astro';
         <div class="mb-12 md:mb-16 reveal" style="transition-delay: 0.1s;">
           <div class="screenshot-pair">
             <div class="phone-frame">
-              <img src="/screenshots/chat-light-mobile.png" alt="Dueydo chat in light mode" loading="lazy" />
+              <img src="/screenshots/chat-light-mobile.png" alt="Dueydo chat in light mode" loading="lazy" width="1170" height="2532" />
             </div>
             <div class="phone-frame">
-              <img src="/screenshots/chat-dark-mobile.png" alt="Dueydo chat in dark mode" loading="lazy" />
+              <img src="/screenshots/chat-dark-mobile.png" alt="Dueydo chat in dark mode" loading="lazy" width="1170" height="2532" />
             </div>
           </div>
           <p class="text-center mt-4 md:mt-5 text-sm text-text-inverse/50 font-accent italic">
@@ -203,10 +204,10 @@ import Footer from '../components/Footer.astro';
         <div class="mb-12 md:mb-16 reveal" style="transition-delay: 0.1s;">
           <div class="screenshot-pair">
             <div class="phone-frame">
-              <img src="/screenshots/thread-light-mobile.png" alt="Dueydo thread in light mode" loading="lazy" />
+              <img src="/screenshots/thread-light-mobile.png" alt="Dueydo thread in light mode" loading="lazy" width="1170" height="2532" />
             </div>
             <div class="phone-frame">
-              <img src="/screenshots/thread-dark-mobile.png" alt="Dueydo thread in dark mode" loading="lazy" />
+              <img src="/screenshots/thread-dark-mobile.png" alt="Dueydo thread in dark mode" loading="lazy" width="1170" height="2532" />
             </div>
           </div>
           <p class="text-center mt-4 md:mt-5 text-sm text-text-inverse/50 font-accent italic">
@@ -218,10 +219,10 @@ import Footer from '../components/Footer.astro';
         <div class="mb-12 md:mb-16 reveal" style="transition-delay: 0.1s;">
           <div class="screenshot-pair">
             <div class="phone-frame">
-              <img src="/screenshots/posts-list-light-mobile.png" alt="Dueydo posts in light mode" loading="lazy" />
+              <img src="/screenshots/posts-list-light-mobile.png" alt="Dueydo posts in light mode" loading="lazy" width="1170" height="2532" />
             </div>
             <div class="phone-frame">
-              <img src="/screenshots/posts-list-dark-mobile.png" alt="Dueydo posts in dark mode" loading="lazy" />
+              <img src="/screenshots/posts-list-dark-mobile.png" alt="Dueydo posts in dark mode" loading="lazy" width="1170" height="2532" />
             </div>
           </div>
           <p class="text-center mt-4 md:mt-5 text-sm text-text-inverse/50 font-accent italic">
@@ -233,10 +234,10 @@ import Footer from '../components/Footer.astro';
         <div class="reveal" style="transition-delay: 0.1s;">
           <div class="screenshot-pair">
             <div class="phone-frame">
-              <img src="/screenshots/post-detail-light-mobile.png" alt="Dueydo post detail in light mode" loading="lazy" />
+              <img src="/screenshots/post-detail-light-mobile.png" alt="Dueydo post detail in light mode" loading="lazy" width="1170" height="2532" />
             </div>
             <div class="phone-frame">
-              <img src="/screenshots/post-detail-dark-mobile.png" alt="Dueydo post detail in dark mode" loading="lazy" />
+              <img src="/screenshots/post-detail-dark-mobile.png" alt="Dueydo post detail in dark mode" loading="lazy" width="1170" height="2532" />
             </div>
           </div>
           <p class="text-center mt-4 md:mt-5 text-sm text-text-inverse/50 font-accent italic">

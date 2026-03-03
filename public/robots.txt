@@ -1,0 +1,6 @@
+# Dueydo Landing Page — robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://dueydo.com/sitemap.xml
