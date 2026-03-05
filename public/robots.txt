@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://dueydo.com/sitemap.xml
+Sitemap: https://dueydo.com/sitemap-index.xml
